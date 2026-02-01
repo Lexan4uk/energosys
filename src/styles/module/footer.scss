@@ -1,0 +1,31 @@
+.footer {
+	&__content-box {
+		grid-template-columns: 1fr 1fr 2fr 1fr;
+	}
+	&__contacts {
+		max-width: 40.4rem;
+	}
+	&__map {
+		width: 64rem;
+		height: 24.4rem;
+	}
+}
+
+@include media-down($bp) {
+	.footer {
+		&__content-box {
+			display: flex;
+			flex-direction: column;
+		}
+		&__contacts {
+			max-width: none;
+		}
+		&__map {
+			width: 100%;
+			height: 28.8rem;
+		}
+	}
+}
+#footer-map [class*='ground-pane'] {
+	filter: grayscale(1) brightness(1.05) contrast(0.9);
+}

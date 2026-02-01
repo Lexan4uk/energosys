@@ -1,0 +1,470 @@
+$fc-sizes: (
+	'0': 0,
+	'0.2': 0.2rem,
+	'0.4': 0.4rem,
+	'0.6': 0.6rem,
+	'0.8': 0.8rem,
+	'1': 1rem,
+	'1.2': 1.2rem,
+	'1.4': 1.4rem,
+	'1.6': 1.6rem,
+	'1.8': 1.8rem,
+	'2': 2rem,
+	'2.2': 2.2rem,
+	'2.4': 2.4rem,
+	'2.6': 2.6rem,
+	'2.8': 2.8rem,
+	'3': 3rem,
+	'3.2': 3.2rem,
+	'3.4': 3.4rem,
+	'3.6': 3.6rem,
+	'3.8': 3.8rem,
+	'4': 4rem,
+	'4.2': 4.2rem,
+	'4.4': 4.4rem,
+	'4.6': 4.6rem,
+	'4.8': 4.8rem,
+	'5': 5rem,
+	'5.2': 5.2rem,
+	'5.4': 5.4rem,
+	'5.6': 5.6rem,
+	'5.8': 5.8rem,
+	'6': 6rem,
+	'6.2': 6.2rem,
+	'6.4': 6.4rem,
+	'6.6': 6.6rem,
+	'6.8': 6.8rem,
+	'7': 7rem,
+	'7.2': 7.2rem,
+	'7.4': 7.4rem,
+	'7.6': 7.6rem,
+	'7.8': 7.8rem,
+	'8': 8rem,
+	'8.2': 8.2rem,
+	'8.4': 8.4rem,
+	'8.6': 8.6rem,
+	'8.8': 8.8rem,
+	'9': 9rem,
+	'9.2': 9.2rem,
+	'9.4': 9.4rem,
+	'9.6': 9.6rem,
+	'9.8': 9.8rem,
+	'10': 10rem,
+	'999': 999rem,
+	'max': 100%,
+	'auto': auto
+);
+$fc-colors: (
+	'white': var(--color-white),
+	'blue': var(--color-blue),
+	'grey-50': var(--color-grey-50),
+	'grey-100': var(--color-grey-100),
+	'grey-200': var(--color-grey-200),
+	'none': #ffffff00
+);
+$fc-tracking: (
+	'0': 0,
+	'1%': 1%,
+	'2%': 2%,
+	'3%': 3%,
+	'4%': 4%,
+	'1%-': -1%,
+	'2%-': -2%,
+	'3%-': -3%,
+	'4%-': -4%
+);
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+@function escape-dot($name) {
+	@return str-replace($name, '.', '\\.');
+}
+
+@function escape-class($name) {
+	$escaped: str-replace($name, '.', '\\.');
+	$escaped: str-replace($escaped, '%', '\\%');
+	@return $escaped;
+}
+
+@mixin base-class($class) {
+	.#{$class} {
+		@content;
+	}
+}
+
+@mixin bp-class($class) {
+	@media (max-width: $bp) {
+		.bp\:#{$class} {
+			@content;
+		}
+	}
+}
+
+/* Layout */
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
+.flex {
+	display: flex;
+}
+.inline-flex {
+	display: inline-flex;
+}
+.grid {
+	display: grid;
+}
+.hidden {
+	display: none;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+.flex-col {
+	flex-direction: column;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.items-start {
+	align-items: flex-start;
+}
+.items-center {
+	align-items: center;
+}
+.items-end {
+	align-items: flex-end;
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-between {
+	justify-content: space-between;
+}
+
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.fixed {
+	position: fixed;
+}
+.sticky {
+	position: sticky;
+}
+
+.w-full {
+	width: 100%;
+}
+.h-full {
+	height: 100%;
+}
+.min-h-full {
+	min-height: 100%;
+}
+.min-w-full {
+	min-width: 100%;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+.overflow-auto {
+	overflow: auto;
+}
+
+/* Typography */
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.fw-700 {
+	font-weight: 700;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.lh-0-9 {
+	line-height: 0.9;
+}
+.lh-1 {
+	line-height: 1;
+}
+.lh-1-1 {
+	line-height: 1.1;
+}
+.lh-1-2 {
+	line-height: 1.2;
+}
+.lh-1-4 {
+	line-height: 1.4;
+}
+.lh-1-6 {
+	line-height: 1.6;
+}
+
+/* Spacing + size */
+@each $name, $value in $fc-sizes {
+	$suffix: escape-dot($name);
+
+	@include base-class('p-#{$suffix}') {
+		padding: $value;
+	}
+	@include base-class('pt-#{$suffix}') {
+		padding-top: $value;
+	}
+	@include base-class('pr-#{$suffix}') {
+		padding-right: $value;
+	}
+	@include base-class('pb-#{$suffix}') {
+		padding-bottom: $value;
+	}
+	@include base-class('pl-#{$suffix}') {
+		padding-left: $value;
+	}
+	@include base-class('px-#{$suffix}') {
+		padding-left: $value;
+		padding-right: $value;
+	}
+	@include base-class('py-#{$suffix}') {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+
+	@include base-class('m-#{$suffix}') {
+		margin: $value;
+	}
+	@include base-class('mt-#{$suffix}') {
+		margin-top: $value;
+	}
+	@include base-class('mr-#{$suffix}') {
+		margin-right: $value;
+	}
+	@include base-class('mb-#{$suffix}') {
+		margin-bottom: $value;
+	}
+	@include base-class('ml-#{$suffix}') {
+		margin-left: $value;
+	}
+	@include base-class('mx-#{$suffix}') {
+		margin-left: $value;
+		margin-right: $value;
+	}
+	@include base-class('my-#{$suffix}') {
+		margin-top: $value;
+		margin-bottom: $value;
+	}
+
+	@include base-class('gap-#{$suffix}') {
+		gap: $value;
+	}
+
+	@include base-class('w-#{$suffix}') {
+		width: $value;
+	}
+	@include base-class('h-#{$suffix}') {
+		height: $value;
+	}
+
+	@include base-class('top-#{$suffix}') {
+		top: $value;
+	}
+	@include base-class('right-#{$suffix}') {
+		right: $value;
+	}
+	@include base-class('bottom-#{$suffix}') {
+		bottom: $value;
+	}
+	@include base-class('left-#{$suffix}') {
+		left: $value;
+	}
+}
+
+@each $name, $value in $fc-sizes {
+	$suffix: escape-dot($name);
+	@include base-class('text-#{$suffix}') {
+		font-size: $value;
+	}
+}
+
+@each $name, $value in $fc-sizes {
+	$suffix: escape-dot($name);
+	@include base-class('rounded-#{$suffix}') {
+		border-radius: $value;
+	}
+}
+
+/* Letter spacing */
+@each $name, $value in $fc-tracking {
+	$suffix: escape-class($name);
+	@include base-class('tracking-#{$suffix}') {
+		letter-spacing: $value;
+	}
+}
+
+/* Colors */
+@each $name, $value in $fc-colors {
+	@include base-class('textcol-#{$name}') {
+		color: $value;
+	}
+	@include base-class('fill-#{$name}') {
+		fill: $value;
+	}
+	@include base-class('stroke-#{$name}') {
+		stroke: $value;
+	}
+}
+
+/* Breakpoint variants (always after base) */
+@each $name, $value in $fc-sizes {
+	$suffix: escape-dot($name);
+
+	@include bp-class('p-#{$suffix}') {
+		padding: $value;
+	}
+	@include bp-class('pt-#{$suffix}') {
+		padding-top: $value;
+	}
+	@include bp-class('pr-#{$suffix}') {
+		padding-right: $value;
+	}
+	@include bp-class('pb-#{$suffix}') {
+		padding-bottom: $value;
+	}
+	@include bp-class('pl-#{$suffix}') {
+		padding-left: $value;
+	}
+	@include bp-class('px-#{$suffix}') {
+		padding-left: $value;
+		padding-right: $value;
+	}
+	@include bp-class('py-#{$suffix}') {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+
+	@include bp-class('m-#{$suffix}') {
+		margin: $value;
+	}
+	@include bp-class('mt-#{$suffix}') {
+		margin-top: $value;
+	}
+	@include bp-class('mr-#{$suffix}') {
+		margin-right: $value;
+	}
+	@include bp-class('mb-#{$suffix}') {
+		margin-bottom: $value;
+	}
+	@include bp-class('ml-#{$suffix}') {
+		margin-left: $value;
+	}
+	@include bp-class('mx-#{$suffix}') {
+		margin-left: $value;
+		margin-right: $value;
+	}
+	@include bp-class('my-#{$suffix}') {
+		margin-top: $value;
+		margin-bottom: $value;
+	}
+
+	@include bp-class('gap-#{$suffix}') {
+		gap: $value;
+	}
+
+	@include bp-class('w-#{$suffix}') {
+		width: $value;
+	}
+	@include bp-class('h-#{$suffix}') {
+		height: $value;
+	}
+
+	@include bp-class('top-#{$suffix}') {
+		top: $value;
+	}
+	@include bp-class('right-#{$suffix}') {
+		right: $value;
+	}
+	@include bp-class('bottom-#{$suffix}') {
+		bottom: $value;
+	}
+	@include bp-class('left-#{$suffix}') {
+		left: $value;
+	}
+}
+
+@each $name, $value in $fc-sizes {
+	$suffix: escape-dot($name);
+	@include bp-class('text-#{$suffix}') {
+		font-size: $value;
+	}
+}
+
+@each $name, $value in $fc-sizes {
+	$suffix: escape-dot($name);
+	@include bp-class('rounded-#{$suffix}') {
+		border-radius: $value;
+	}
+}
+
+@each $name, $value in $fc-tracking {
+	$suffix: escape-class($name);
+	@include bp-class('tracking-#{$suffix}') {
+		letter-spacing: $value;
+	}
+}
+
+@each $name, $value in $fc-colors {
+	@include bp-class('textcol-#{$name}') {
+		color: $value;
+	}
+	@include bp-class('fill-#{$name}') {
+		fill: $value;
+	}
+	@include bp-class('stroke-#{$name}') {
+		stroke: $value;
+	}
+}

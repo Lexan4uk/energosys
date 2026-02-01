@@ -1,0 +1,37 @@
+<header>
+	<div class="flex font-ibm global-padding-x global-padding-top">
+		<div class="flex justify-between w-max items-center">
+			<a href="/" class="flex gap-1.4 items-center">
+				<img class="header__logo-img" src="/images/logo.png" alt="Лого" />
+				<img class="header__logo-text" src="/images/logo-text.png" alt="Лого текст" />
+			</a>
+			<nav class="flex gap-4.4 only-desktop" id="nav">
+				<a href="/catalog" target="_blank" class="nav-item">КАТАЛОГ</a>
+				<a href="/services" target="_blank" class="nav-item">УСЛУГИ</a>
+				<a href="/about" target="_blank" class="nav-item">О КОМПАНИИ</a>
+				<a href="/projects" target="_blank" class="nav-item">ПРОЕКТЫ</a>
+				<a href="/contact" target="_blank" class="nav-item">КОНТАКТЫ</a>
+			</nav>
+			<div class="flex items-center gap-4.8 only-desktop">
+				<div class="flex items-center gap-0.8">
+					<span class="blue-box"></span>
+					<span class="tracking-4%-">8 495 211 03 26</span>
+				</div>
+				<button class="button--text">
+					<span>ОСТАВИТЬ ЗАЯВКУ</span>
+					<svg class="icon w-2 h-2">
+						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="mobile-menu only-mobile">
+				<button class="button--icon" id="menu-open-button" aria-expanded="false" aria-controls="mobile-dropdown">
+					<svg class="icon w-2.4 h-2.4">
+						<use href="/images/svg/svgs.svg#icon-menu"></use>
+					</svg>
+				</button>
+				<div class="mobile-dropdown" id="mobile-dropdown" hidden></div>
+			</div>
+		</div>
+	</div>
+</header>
