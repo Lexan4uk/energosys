@@ -1,5 +1,6 @@
 $fc-sizes: (
 	'0': 0,
+	'0.1': 0.1rem,
 	'0.2': 0.2rem,
 	'0.4': 0.4rem,
 	'0.6': 0.6rem,
@@ -50,6 +51,97 @@ $fc-sizes: (
 	'9.6': 9.6rem,
 	'9.8': 9.8rem,
 	'10': 10rem,
+	'11': 11rem,
+	'12': 12rem,
+	'13': 13rem,
+	'14': 14rem,
+	'15': 15rem,
+	'16': 16rem,
+	'17': 17rem,
+	'18': 18rem,
+	'19': 19rem,
+	'20': 20rem,
+	'21': 21rem,
+	'22': 22rem,
+	'23': 23rem,
+	'24': 24rem,
+	'25': 25rem,
+	'26': 26rem,
+	'27': 27rem,
+	'28': 28rem,
+	'29': 29rem,
+	'30': 30rem,
+	'31': 31rem,
+	'32': 32rem,
+	'33': 33rem,
+	'34': 34rem,
+	'35': 35rem,
+	'36': 36rem,
+	'37': 37rem,
+	'38': 38rem,
+	'39': 39rem,
+	'40': 40rem,
+	'41': 41rem,
+	'42': 42rem,
+	'43': 43rem,
+	'44': 44rem,
+	'45': 45rem,
+	'46': 46rem,
+	'47': 47rem,
+	'48': 48rem,
+	'49': 49rem,
+	'50': 50rem,
+	'51': 51rem,
+	'52': 52rem,
+	'53': 53rem,
+	'54': 54rem,
+	'55': 55rem,
+	'56': 56rem,
+	'57': 57rem,
+	'58': 58rem,
+	'59': 59rem,
+	'60': 60rem,
+	'61': 61rem,
+	'62': 62rem,
+	'63': 63rem,
+	'64': 64rem,
+	'65': 65rem,
+	'66': 66rem,
+	'67': 67rem,
+	'68': 68rem,
+	'69': 69rem,
+	'70': 70rem,
+	'71': 71rem,
+	'72': 72rem,
+	'73': 73rem,
+	'74': 74rem,
+	'75': 75rem,
+	'76': 76rem,
+	'77': 77rem,
+	'78': 78rem,
+	'79': 79rem,
+	'80': 80rem,
+	'81': 81rem,
+	'82': 82rem,
+	'83': 83rem,
+	'84': 84rem,
+	'85': 85rem,
+	'86': 86rem,
+	'87': 87rem,
+	'88': 88rem,
+	'89': 89rem,
+	'90': 90rem,
+	'91': 91rem,
+	'92': 92rem,
+	'93': 93rem,
+	'94': 94rem,
+	'95': 95rem,
+	'96': 96rem,
+	'97': 97rem,
+	'98': 98rem,
+	'99': 99rem,
+	'100': 100rem,
+
 	'999': 999rem,
 	'max': 100%,
 	'auto': auto
@@ -149,6 +241,9 @@ $fc-tracking: (
 .items-end {
 	align-items: flex-end;
 }
+.self-start {
+	align-self: flex-start;
+}
 .justify-start {
 	justify-content: flex-start;
 }
@@ -246,6 +341,39 @@ $fc-tracking: (
 .lh-1-6 {
 	line-height: 1.6;
 }
+.border-solid {
+	border-style: solid;
+	border-width: 0;
+}
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3,
+.line-clamp-4,
+.line-clamp-5,
+.line-clamp-6 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.line-clamp-1 {
+	-webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+	-webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+	-webkit-line-clamp: 3;
+}
+.line-clamp-4 {
+	-webkit-line-clamp: 4;
+}
+.line-clamp-5 {
+	-webkit-line-clamp: 5;
+}
+.line-clamp-6 {
+	-webkit-line-clamp: 6;
+}
 
 /* Spacing + size */
 @each $name, $value in $fc-sizes {
@@ -309,6 +437,25 @@ $fc-tracking: (
 	@include base-class('h-#{$suffix}') {
 		height: $value;
 	}
+	@include base-class('max-w-#{$suffix}') {
+		max-width: $value;
+	}
+
+	@include base-class('border-#{$suffix}') {
+		border-width: $value;
+	}
+	@include base-class('border-t-#{$suffix}') {
+		border-top-width: $value;
+	}
+	@include base-class('border-r-#{$suffix}') {
+		border-right-width: $value;
+	}
+	@include base-class('border-b-#{$suffix}') {
+		border-bottom-width: $value;
+	}
+	@include base-class('border-l-#{$suffix}') {
+		border-left-width: $value;
+	}
 
 	@include base-class('top-#{$suffix}') {
 		top: $value;
@@ -336,6 +483,9 @@ $fc-tracking: (
 	@include base-class('rounded-#{$suffix}') {
 		border-radius: $value;
 	}
+	@include base-class('border-rad-#{$suffix}') {
+		border-radius: $value;
+	}
 }
 
 /* Letter spacing */
@@ -357,9 +507,160 @@ $fc-tracking: (
 	@include base-class('stroke-#{$name}') {
 		stroke: $value;
 	}
+	@include base-class('bordercol-#{$name}') {
+		border-color: $value;
+	}
 }
 
 /* Breakpoint variants (always after base) */
+@include bp-class('block') {
+	display: block;
+}
+@include bp-class('inline-block') {
+	display: inline-block;
+}
+@include bp-class('inline') {
+	display: inline;
+}
+@include bp-class('flex') {
+	display: flex;
+}
+@include bp-class('inline-flex') {
+	display: inline-flex;
+}
+@include bp-class('grid') {
+	display: grid;
+}
+@include bp-class('hidden') {
+	display: none;
+}
+
+@include bp-class('flex-row') {
+	flex-direction: row;
+}
+@include bp-class('flex-col') {
+	flex-direction: column;
+}
+@include bp-class('flex-wrap') {
+	flex-wrap: wrap;
+}
+
+@include bp-class('items-start') {
+	align-items: flex-start;
+}
+@include bp-class('items-center') {
+	align-items: center;
+}
+@include bp-class('items-end') {
+	align-items: flex-end;
+}
+@include bp-class('justify-start') {
+	justify-content: flex-start;
+}
+@include bp-class('justify-center') {
+	justify-content: center;
+}
+@include bp-class('justify-end') {
+	justify-content: flex-end;
+}
+@include bp-class('justify-between') {
+	justify-content: space-between;
+}
+
+@include bp-class('relative') {
+	position: relative;
+}
+@include bp-class('absolute') {
+	position: absolute;
+}
+@include bp-class('fixed') {
+	position: fixed;
+}
+@include bp-class('sticky') {
+	position: sticky;
+}
+
+@include bp-class('w-full') {
+	width: 100%;
+}
+@include bp-class('h-full') {
+	height: 100%;
+}
+@include bp-class('min-h-full') {
+	min-height: 100%;
+}
+@include bp-class('min-w-full') {
+	min-width: 100%;
+}
+
+@include bp-class('overflow-hidden') {
+	overflow: hidden;
+}
+@include bp-class('overflow-auto') {
+	overflow: auto;
+}
+
+@include bp-class('text-left') {
+	text-align: left;
+}
+@include bp-class('text-center') {
+	text-align: center;
+}
+@include bp-class('text-right') {
+	text-align: right;
+}
+
+@include bp-class('fw-400') {
+	font-weight: 400;
+}
+@include bp-class('fw-500') {
+	font-weight: 500;
+}
+@include bp-class('fw-600') {
+	font-weight: 600;
+}
+@include bp-class('fw-700') {
+	font-weight: 700;
+}
+
+@include bp-class('uppercase') {
+	text-transform: uppercase;
+}
+@include bp-class('lowercase') {
+	text-transform: lowercase;
+}
+@include bp-class('capitalize') {
+	text-transform: capitalize;
+}
+@include bp-class('lh-0-9') {
+	line-height: 0.9;
+}
+@include bp-class('lh-1') {
+	line-height: 1;
+}
+@include bp-class('lh-1-1') {
+	line-height: 1.1;
+}
+@include bp-class('lh-1-2') {
+	line-height: 1.2;
+}
+@include bp-class('lh-1-4') {
+	line-height: 1.4;
+}
+@include bp-class('lh-1-6') {
+	line-height: 1.6;
+}
+
+@each $clamp in 1, 2, 3, 4, 5, 6 {
+	@include bp-class('line-clamp-#{$clamp}') {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: $clamp;
+	}
+}
+
 @each $name, $value in $fc-sizes {
 	$suffix: escape-dot($name);
 
@@ -421,6 +722,9 @@ $fc-tracking: (
 	@include bp-class('h-#{$suffix}') {
 		height: $value;
 	}
+	@include bp-class('max-w-#{$suffix}') {
+		max-width: $value;
+	}
 
 	@include bp-class('top-#{$suffix}') {
 		top: $value;
@@ -448,6 +752,9 @@ $fc-tracking: (
 	@include bp-class('rounded-#{$suffix}') {
 		border-radius: $value;
 	}
+	@include bp-class('border-r-#{$suffix}') {
+		border-radius: $value;
+	}
 }
 
 @each $name, $value in $fc-tracking {
@@ -466,5 +773,8 @@ $fc-tracking: (
 	}
 	@include bp-class('stroke-#{$name}') {
 		stroke: $value;
+	}
+	@include bp-class('bordercol-#{$name}') {
+		border-color: $value;
 	}
 }

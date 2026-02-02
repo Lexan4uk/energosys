@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function(){
     
     // modules
     @@include('module/supportWebp.js')
-    @@include('module/mobile-dropdown-button.js')
     @@include('module/footer-map.js')
-
+    @@include('module/custom-scroll.js')
+    @@include('module/main-toggle-categories.js')
+    @@include('module/main-swiper.js')
     
 })

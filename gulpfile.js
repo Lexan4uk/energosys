@@ -6,7 +6,6 @@ import gulpIf from 'gulp-if'
 import plumber from 'gulp-plumber'
 import replace from 'gulp-replace'
 
-import fonter from 'gulp-fonter'
 import htmlMin from 'gulp-htmlmin'
 import removeHtml from 'gulp-remove-html'
 import ttf2woff2 from 'gulp-ttf2woff2'
@@ -56,7 +55,7 @@ const path = {
 		css: sourceFolder + '/styles/styles.{scss,css}',
 		js: sourceFolder + '/scripts/script.js',
 		img: sourceFolder + '/images/**/*.{jpg,jpeg,png,gif,ico,webp,svg}',
-		fonts: sourceFolder + '/fonts/*.{ttf,eot,otf,ttc,woff,woff2}',
+		fonts: sourceFolder + '/fonts/**/*.{ttf,eot,otf,ttc,woff,woff2}',
 		svgSprite: sourceFolder + '/images/svg/svgs.svg'
 	},
 
@@ -133,9 +132,8 @@ export const svgSprite = () => {
 
 export const fonts = () => {
 	return gulp
-		.src(path.src.fonts)
+		.src(path.src.fonts, { base: sourceFolder + '/fonts' })
 		.pipe(plumber())
-		.pipe(fonter({ formats: ['ttf', 'eot', 'woff', 'svg'] }))
 		.pipe(gulp.dest(path.build.fonts))
 		.pipe(ttf2woff2())
 		.pipe(gulp.dest(path.build.fonts))
@@ -154,9 +152,10 @@ export const watchFiles = () => {
 	gulp.watch(path.watch.js, js)
 	gulp.watch(path.watch.img, images)
 	gulp.watch(path.watch.svgSprite, svgSprite)
+	gulp.watch(sourceFolder + '/fonts/**/*.{ttf,eot,otf,ttc,woff,woff2}', fonts)
 }
 
-const dev = gulp.parallel(css, html, js, images, svgSprite)
+const dev = gulp.parallel(css, html, js, images, svgSprite, fonts)
 const watch = gulp.parallel(watchFiles, browserSync)
 
 export const build = gulp.series(clean, setMode(true), dev, fonts, browserSync)

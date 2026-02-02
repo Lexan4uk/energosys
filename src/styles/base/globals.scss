@@ -1,5 +1,5 @@
 html {
-	font-family: 'Involve', sans-serif;
+	font-family: 'Involve', 'IBM Plex Sans', 'IBM Plex Mono', 'Arial', sans-serif;
 	color: var(--color-dark);
 	font-size: 0.520835vw;
 	font-style: normal;
@@ -54,10 +54,13 @@ textarea {
 }
 .font-ibm {
 	font-family: 'IBM Plex Mono';
+	text-transform: uppercase;
 }
 
 .button {
 	&--text {
+		font-family: 'IBM Plex Mono';
+		text-transform: uppercase;
 		padding-top: 1.6rem;
 		padding-bottom: 1.6rem;
 		padding-left: 2.2rem;
@@ -68,6 +71,7 @@ textarea {
 		border: 0.2rem solid var(--color-blue);
 		color: var(--color-blue);
 		background-color: var(--color-white);
+		width: fit-content;
 		&:hover {
 			border-color: var(--color-white);
 			color: var(--color-white);
@@ -107,18 +111,91 @@ textarea {
 		}
 	}
 }
-.blue-box {
-	width: 0.6rem;
-	height: 0.8rem;
-	background-color: var(--color-blue);
-	flex-shrink: 0;
+.with {
+	&-blue-box,
+	&-grey-box {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 0.6rem;
+			height: 0.8rem;
+			margin-left: -1.4rem;
+		}
+	}
+
+	&-blue-box {
+		&::before {
+			background-color: var(--color-blue);
+		}
+	}
+
+	&-grey-box {
+		&::before {
+			background-color: var(--color-grey-100);
+		}
+	}
+	&-blue-brackets {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem; // расстояние до текста
+
+		&::before,
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 0.7rem; // ширина "скобки" (7px)
+			height: 1.8rem;
+			box-sizing: border-box;
+			border-top: 0.2rem solid var(--color-blue);
+			border-bottom: 0.2rem solid var(--color-blue);
+		}
+
+		&::before {
+			border-left: 0.2rem solid var(--color-blue);
+			border-right: 0;
+		}
+
+		&::after {
+			border-right: 0.2rem solid var(--color-blue);
+			border-left: 0;
+		}
+	}
+
+	&-white-brackets {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem; // расстояние до текста
+
+		&::before,
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 0.7rem; // ширина "скобки" (7px)
+			height: 1.8rem;
+			box-sizing: border-box;
+			border-top: 0.2rem solid var(--color-white);
+			border-bottom: 0.2rem solid var(--color-white);
+		}
+
+		&::before {
+			border-left: 0.2rem solid var(--color-white);
+			border-right: 0;
+		}
+
+		&::after {
+			border-right: 0.2rem solid var(--color-white);
+			border-left: 0;
+		}
+	}
 }
-.grey-box {
-	width: 0.6rem;
-	height: 0.8rem;
-	background-color: var(--color-grey-100);
-	flex-shrink: 0;
-}
+
 .nav-item {
 	transition: color 0.5s ease;
 	&:hover {
@@ -129,13 +206,22 @@ textarea {
 	display: none;
 }
 .only-desktop {
-	display: revert;
+	display: flex;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.wrap {
+	white-space: normal;
 }
 @include media-down($bp) {
 	html {
 		font-size: 10px;
 		font-size: calc((100 / 375) * 10vw);
 		-webkit-text-size-adjust: none;
+	}
+	.csb-root {
+		display: none !important;
 	}
 
 	body {
@@ -152,7 +238,7 @@ textarea {
 		padding-bottom: 4.6rem;
 	}
 	.only-mobile {
-		display: revert !important;
+		display: flex !important;
 	}
 	.only-desktop {
 		display: none !important;
