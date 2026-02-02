@@ -4,7 +4,6 @@ import gulp from 'gulp'
 import fileInclude from 'gulp-file-include'
 import gulpIf from 'gulp-if'
 import plumber from 'gulp-plumber'
-import replace from 'gulp-replace'
 
 import htmlMin from 'gulp-htmlmin'
 import removeHtml from 'gulp-remove-html'
@@ -87,7 +86,6 @@ export const html = () => {
 		.pipe(plumber())
 		.pipe(fileInclude({ basepath: 'src/' }))
 		.pipe(webpHtml())
-		.pipe(gulpIf(isBuildFlag, replace(/(href|src|srcset)="\/(?!\/)/g, '$1="./')))
 		.pipe(gulpIf(isBuildFlag, removeHtml()))
 		.pipe(gulpIf(isBuildFlag, htmlMin({ collapseWhitespace: true, removeComments: true })))
 		.pipe(gulp.dest(path.build.html))
