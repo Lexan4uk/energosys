@@ -77,7 +77,11 @@ button {
 	background-color: inherit;
 	height: fit-content;
 	width: fit-content;
-	transition: all 0.5s ease;
+
+	transition:
+		border-color 0.5s ease,
+		background-color 0.5s ease,
+		color 0.5s ease;
 }
 
 ul {
