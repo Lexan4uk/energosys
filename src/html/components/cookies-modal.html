@@ -1,0 +1,23 @@
+<div class="cookies-modal" id="cookies-modal">
+	<div class="cookies-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="cookies-modal-title">
+		<div class="cookies-modal__content p-3.4 bp:p-2.4 flex flex-col">
+			<span id="cookies-modal-title" class="bp:text-1.4 bp:pt-3.8 mb-6 bp:mb-4 max-w-55"> Мы используем файлы cookie, чтобы обеспечить корректную работу сайта, улучшить его функциональность и сделать использование более удобным. Продолжая пользоваться сайтом, вы соглашаетесь с использованием cookie в соответствии с нашей Политикой конфиденциальности. </span>
+			<div class="flex gap-8 w-full bp:gap-0 bp:justify-between bp:items-center">
+				<button class="button--text" data-cookies-open>
+					<span>принять</span>
+					<svg class="icon w-2 h-2">
+						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+					</svg>
+				</button>
+				<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets">подробнее</a>
+			</div>
+		</div>
+
+		<button type="button" class="cookies-modal__close m-3.4 bp:m-1.6" id="cookies-modal-close-btn" aria-label="Закрыть">
+			<svg class="icon w-2.4 h-2.4">
+				<use href="/images/svg/svgs.svg#icon-close"></use>
+			</svg>
+		</button>
+		<img class="cookies-modal__logo-bg" src="/images/logo-bg.png" alt="лого-бг" />
+	</div>
+</div>

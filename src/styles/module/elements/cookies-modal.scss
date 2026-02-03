@@ -1,0 +1,82 @@
+.cookies-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: none; // по умолчанию закрыто
+	align-items: flex-end;
+	justify-content: flex-start;
+	padding: 1.6rem;
+	overflow: hidden;
+	height: fit-content;
+	width: fit-content;
+	margin-top: auto;
+
+	&__dialog {
+		position: relative;
+		overflow: auto;
+		background: var(--color-white);
+		border-radius: 1.2rem;
+		border: 1px solid var(--color-grey-50);
+		box-sizing: border-box;
+		width: 70.6rem;
+		overflow: hidden;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 5;
+	}
+	&.is-open {
+		display: flex;
+	}
+	&__logo-bg {
+		position: absolute;
+		height: 33.8rem;
+		width: auto;
+		top: 0;
+		right: 0;
+		margin-right: 0rem;
+		transform: scaleX(-1);
+		opacity: 100%;
+	}
+	&__content {
+		z-index: 5;
+		position: relative;
+	}
+	.cookies-form {
+		&__field {
+			display: block;
+		}
+
+		&__control {
+			width: 100%;
+			border: 0.2rem solid var(--color-grey-50);
+			background: #ffffff00;
+			padding: 1.3rem 1.8rem; // y / x
+			outline: none;
+			font: inherit;
+			box-sizing: border-box;
+
+			&::placeholder {
+				font-family: 'IBM Plex Mono';
+				text-transform: uppercase;
+				color: var(--color-grey-50);
+			}
+
+			&:focus {
+				border-color: var(--color-blue);
+			}
+		}
+	}
+}
+@include media-down($bp) {
+	.cookies-modal {
+		width: auto;
+		&__logo-bg {
+			height: 21rem;
+			margin-top: 2.5rem;
+		}
+	}
+}

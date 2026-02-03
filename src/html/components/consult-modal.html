@@ -1,0 +1,39 @@
+<div class="consult-modal" id="consult-modal">
+	<div class="consult-modal__backdrop" data-consult-close></div>
+	<div class="consult-modal__dialog bp:w-33" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
+		<div class="consult-modal__content p-4 bp:p-1.6 flex flex-col">
+			<span id="consult-modal-title" class="text-3.4 bp:text-2.2 fw-700 text-center bp:pt-3.2 mb-4.2 bp:mb-4">
+				Получите консультацию<br />
+				по выбору продукции <br />
+				для ваших задач
+			</span>
+			<form class="consult-form flex flex-col gap-2.4 bp:gap-2" action="">
+				<label class="consult-form__field">
+					<input class="consult-form__control" type="text" name="name" placeholder="ВАШЕ ИМЯ" autocomplete="name" />
+				</label>
+
+				<label class="consult-form__field">
+					<input class="consult-form__control" type="tel" name="phone" placeholder="ВАШ ТЕЛЕФОН" autocomplete="tel" />
+				</label>
+
+				<label class="consult-form__field">
+					<textarea class="consult-form__control consult-form__textarea" name="task" placeholder="ОПИШИТЕ ЗАДАЧУ"></textarea>
+				</label>
+
+				<button type="submit" class="button--text mt-1.8 bp:mt-2 mx-auto bp:mx-0">
+					<span>получить консультацию</span>
+					<svg class="icon w-2 h-2">
+						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+					</svg>
+				</button>
+			</form>
+		</div>
+
+		<button type="button" class="consult-modal__close m-4 bp:m-1.6" id="consult-modal-close-btn" aria-label="Закрыть">
+			<svg class="icon w-2.4 h-2.4">
+				<use href="/images/svg/svgs.svg#icon-close"></use>
+			</svg>
+		</button>
+		<img class="consult-modal__logo-bg" src="/images/logo-bg.png" alt="лого-бг" />
+	</div>
+</div>

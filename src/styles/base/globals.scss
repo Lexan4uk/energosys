@@ -94,6 +94,8 @@ textarea {
 		align-items: center;
 		justify-content: center;
 		border: 0.2rem solid var(--color-blue);
+		color: var(--color-blue);
+		background-color: var(--color-white);
 		&:hover {
 			border-color: var(--color-white);
 			color: var(--color-white);
@@ -214,6 +216,7 @@ textarea {
 .wrap {
 	white-space: normal;
 }
+
 @include media-down($bp) {
 	html {
 		font-size: 10px;

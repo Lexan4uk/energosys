@@ -1,6 +1,6 @@
 <header>
 	<div class="flex font-ibm global-padding-x global-padding-top">
-		<div class="flex justify-between w-max items-center">
+		<div class="flex justify-between w-max items-center relative">
 			<a href="/" class="flex gap-1.4 items-center">
 				<img class="header__logo-img" src="/images/logo.png" alt="Лого" />
 				<img class="header__logo-text" src="/images/logo-text.png" alt="Лого текст" />
@@ -12,11 +12,11 @@
 				<a href="/projects" target="_blank" class="nav-item">ПРОЕКТЫ</a>
 				<a href="/contact" target="_blank" class="nav-item">КОНТАКТЫ</a>
 			</nav>
-			<div class="only-desktop flex items-center gap-4.8">
+			<div class="only-desktop flex items-center bp:flex-col gap-4.8" id="nav-contact">
 				<div class="flex">
 					<span class="tracking-4%- with-blue-box">8 495 211 03 26</span>
 				</div>
-				<button class="button--text">
+				<button class="button--text" data-consult-open>
 					<span>ОСТАВИТЬ ЗАЯВКУ</span>
 					<svg class="icon w-2 h-2">
 						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>

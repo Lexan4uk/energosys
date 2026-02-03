@@ -7,7 +7,7 @@
 	<body>
 		@@include('html/header.html')
 
-		<main class="main flex flex-col global-padding-x pt-8">
+		<main class="main flex flex-col global-padding-x pt-8 bp:pt-4 overflow-hidden">
 			<section class="flex flex-col relative">
 				<img class="main__block1-img" src="/images/products/big-product1.png" alt="Товар" />
 				<div class="flex flex-col">
@@ -15,12 +15,12 @@
 						Инженерные <br />
 						решения под ключ
 					</span>
-					<button class="button--text mt-5 bp:mt-1.8">
+					<a href="/catalog" class="button--text mt-5 bp:mt-1.8">
 						<span>КАТАЛОГ ПРОДУКЦИИ</span>
 						<svg class="icon w-2 h-2">
 							<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
 						</svg>
-					</button>
+					</a>
 				</div>
 				<div class="flex w-full justify-between items-end mt-28 pb-12 bp:mt-37 bp:flex-col bp:gap-4.6 bp:pb-10">
 					<div class="flex gap-10 bp:gap-0 bp:justify-between bp:w-full">
@@ -39,7 +39,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="flex flex-col pt-16.6 bp:pt-2.2 pl-53 bp:pl-0 pr-3.4 bp:pr-0 pb-3.6 bp:pb-13">
+			<section class="flex flex-col pt-16.6 bp:pt-2.2 pl-53 bp:pl-0 pr-3.4 bp:pr-0 pb-3.6 bp:pb-13 relative">
 				<div class="flex flex-col main__bracket">
 					<span class="font-ibm fw-500 textcol-grey-100 with-grey-box mb-3 bp:mb-1.4 bp:text-1.6 bp:ml-1.6">о компании</span>
 					<div class="text-6.4 fw-600 max-w-100 lh-1 bp:text-3.2">
@@ -76,12 +76,13 @@
 						</div>
 					</div>
 				</div>
-				<button class="button--text mt-8.4 bp:mt-4.4">
+				<a href="/about" class="button--text mt-8.4 bp:mt-4.4">
 					<span>подробнее о нас</span>
 					<svg class="icon w-2 h-2">
 						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
 					</svg>
-				</button>
+				</a>
+				<img class="main__logo-bg" src="/images/logo-bg.png" alt="лого-бг" />
 			</section>
 			<section class="flex flex-col pt-16.6 bp:pt-0 pb-1.2 bp:pb-2.4">
 				<div class="flex justify-between items-center bp:flex-col bp:gap-2.2">
@@ -170,12 +171,12 @@
 						<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
 					</svg>
 				</button>
-				<button class="button--text mt-5.2 bp:mt-0.8">
+				<a href="/catalog" class="button--text mt-5.2 bp:mt-0.8">
 					<span>каталог продукции</span>
 					<svg class="icon w-2 h-2">
 						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
 					</svg>
-				</button>
+				</a>
 			</section>
 			<section class="mt-16 bp:mt-11 flex flex-col mb-18 bp:mb-11">
 				<div class="flex flex-col items-center bp:items-start mb-4">

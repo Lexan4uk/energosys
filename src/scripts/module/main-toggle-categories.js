@@ -1,4 +1,4 @@
-;(() => {
+function mainToggleCategories() {
 	const btn = document.querySelector('[data-categories-toggle]')
 	const cards = Array.from(document.querySelectorAll('[data-category-extra]'))
 
@@ -85,4 +85,5 @@
 		},
 		{ passive: true }
 	)
-})()
+}
+mainToggleCategories()

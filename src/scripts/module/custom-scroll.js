@@ -1,4 +1,4 @@
-;(() => {
+function customScroll() {
 	const CONFIG = {
 		side: 'right',
 		offset: 1, // отступ от края
@@ -246,4 +246,5 @@
 	} else {
 		init()
 	}
-})()
+}
+customScroll()
