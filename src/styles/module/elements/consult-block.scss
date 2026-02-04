@@ -1,0 +1,25 @@
+.consult {
+	&__logo-bg {
+		position: absolute;
+		height: 43.4rem;
+		width: auto;
+		bottom: 0;
+		left: 0;
+		margin-bottom: -15rem;
+		transform: scaleX(-1);
+		opacity: 100%;
+	}
+}
+@include media-down($bp) {
+	.consult {
+		&__logo-bg {
+			height: 22rem;
+			margin-top: -3rem;
+			margin-bottom: 0;
+			left: unset;
+			right: 0;
+			top: 0;
+			transform: none;
+		}
+	}
+}

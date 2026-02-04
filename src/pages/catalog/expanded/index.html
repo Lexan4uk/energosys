@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		@@include('html/base/meta.html',{ "title": "Расширеный каталог" }) @@include('html/base/styles.html')
+	</head>
+
+	<body>
+		@@include('html/header.html')
+
+		<main class="catalog-expanded flex flex-col pt-8 bp:pt-4 overflow-hidden">
+			<section class="flex flex-col relative global-padding-x">
+				<div class="flex flex-col">
+					<div class="flex justify-between w-full items-start bp:items-start bp:flex-col bp:gap-2">
+						<span class="text-6.4 fw-600 tracking-1 lh-1 bp:text-3.2">
+							Энергетическое<br />
+							и газовае оборудование
+						</span>
+						<form class="global-input-wrapper w-23 bp:w-12">
+							<input class="global-input" type="text" name="search" placeholder="ПОИСК" />
+							<svg class="icon w-2 h-2 textcol-grey-50">
+								<use href="/images/svg/svgs.svg#icon-search"></use>
+							</svg>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="global-padding-x mt-8 bp:mt-2">
+				<div class="catalog-expanded__content grid gap-4 bp:g-1.6 bp:flex bp:flex-col">
+					<div class="flex flex-col border-0.1 bordercol-grey-50 border-solid border-rad-1.2">
+						<div class="px-4 py-2.4 bp:px-1.6 bp:py-1.6 border-b-0.1 bordercol-grey-50 border-solid">
+							<span class="text-3.4 bp:text-2.2 fw-700">
+								Кислородный концентратор <br />
+								промышленный 50 л/мин
+							</span>
+						</div>
+						<div class="flex gap-1 bp:flex-col-rev p-4 bp:p-1.6">
+							<div class="flex flex-col flex-1 gap-2.4 bp:gap-1.2">
+								<div class="flex flex-col gap-1.8 bp:gap-1.2 bp:ml-1.6">
+									<span class="with-grey-box textcol-grey-200">
+										Компактное и надежное решение <br />
+										для обеспечения кислородом
+									</span>
+									<span class="with-grey-box textcol-grey-200"> Выгодная стоимость </span>
+									<span class="with-grey-box textcol-grey-200"> Поставка до 20 дней </span>
+									<span class="with-grey-box textcol-grey-200">
+										Возможность размещения в автономном <br />
+										отапливаемом контейнере
+									</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Производительность (л/мин)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">80</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Чистота газа (%)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">90 – 95.5</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-center w-42 h-42 bp:w-full bp:h-23 overflow-hidden">
+								<img class="h-full w-full bp:h-23" src="/images/products/product1.png" alt="товар" />
+							</div>
+						</div>
+						<div class="flex justify-between items-center">
+							<div class="pb-2 bp:pb-0">
+								<button class="button--text ml-4 bp:ml-1.6">
+									<span>узнать цену</span>
+									<svg class="icon w-2 h-2">
+										<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="flex items-center h-7 px-4 bp:px-1.6 border-l-0.1 border-t-0.1 bordercol-grey-50 border-solid">
+								<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets">подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="flex flex-col border-0.1 bordercol-grey-50 border-solid border-rad-1.2">
+						<div class="px-4 py-2.4 bp:px-1.6 bp:py-1.6 border-b-0.1 bordercol-grey-50 border-solid">
+							<span class="text-3.4 bp:text-2.2 fw-700">
+								Кислородный концентратор <br />
+								промышленный 80 л/мин
+							</span>
+						</div>
+						<div class="flex gap-1 bp:flex-col-rev p-4 bp:p-1.6">
+							<div class="flex flex-col flex-1 gap-2.4 bp:gap-1.2">
+								<div class="flex flex-col gap-1.8 bp:gap-1.2 bp:ml-1.6">
+									<span class="with-grey-box textcol-grey-200">
+										Компактное и надежное решение <br />
+										для обеспечения кислородом
+									</span>
+									<span class="with-grey-box textcol-grey-200"> Выгодная стоимость </span>
+									<span class="with-grey-box textcol-grey-200"> Поставка до 20 дней </span>
+									<span class="with-grey-box textcol-grey-200">
+										Возможность размещения в автономном <br />
+										отапливаемом контейнере
+									</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Производительность (л/мин)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">80</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Чистота газа (%)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">90 – 95.5</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-center w-42 h-42 bp:w-full bp:h-23 overflow-hidden">
+								<img class="h-full w-full bp:h-23" src="/images/products/product7.png" alt="товар" />
+							</div>
+						</div>
+						<div class="flex justify-between items-center">
+							<div class="pb-2 bp:pb-0">
+								<button class="button--text ml-4 bp:ml-1.6">
+									<span>узнать цену</span>
+									<svg class="icon w-2 h-2">
+										<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="flex items-center h-7 px-4 bp:px-1.6 border-l-0.1 border-t-0.1 bordercol-grey-50 border-solid">
+								<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets">подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="flex flex-col border-0.1 bordercol-grey-50 border-solid border-rad-1.2">
+						<div class="px-4 py-2.4 bp:px-1.6 bp:py-1.6 border-b-0.1 bordercol-grey-50 border-solid">
+							<span class="text-3.4 bp:text-2.2 fw-700">
+								Кислородная <br />
+								станция
+							</span>
+						</div>
+						<div class="flex gap-1 bp:flex-col-rev p-4 bp:p-1.6">
+							<div class="flex flex-col flex-1 gap-2.4 bp:gap-1.2">
+								<div class="flex flex-col gap-1.8 bp:gap-1.2 bp:ml-1.6">
+									<span class="with-grey-box textcol-grey-200">
+										Компактное и надежное решение <br />
+										для обеспечения кислородом
+									</span>
+									<span class="with-grey-box textcol-grey-200"> Выгодная стоимость </span>
+									<span class="with-grey-box textcol-grey-200"> Поставка до 20 дней </span>
+									<span class="with-grey-box textcol-grey-200">
+										Возможность размещения в автономном <br />
+										отапливаемом контейнере
+									</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Производительность (л/мин)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">80</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Чистота газа (%)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">90 – 95.5</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-center w-42 h-42 bp:w-full bp:h-23 overflow-hidden">
+								<img class="h-full w-full bp:h-23" src="/images/products/product8.png" alt="товар" />
+							</div>
+						</div>
+						<div class="flex justify-between items-center">
+							<div class="pb-2 bp:pb-0">
+								<button class="button--text ml-4 bp:ml-1.6">
+									<span>узнать цену</span>
+									<svg class="icon w-2 h-2">
+										<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="flex items-center h-7 px-4 bp:px-1.6 border-l-0.1 border-t-0.1 bordercol-grey-50 border-solid">
+								<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets">подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="flex flex-col border-0.1 bordercol-grey-50 border-solid border-rad-1.2">
+						<div class="px-4 py-2.4 bp:px-1.6 bp:py-1.6 border-b-0.1 bordercol-grey-50 border-solid">
+							<span class="text-3.4 bp:text-2.2 fw-700">
+								Блочно-модульная <br />
+								кислородная станция
+							</span>
+						</div>
+						<div class="flex gap-1 bp:flex-col-rev p-4 bp:p-1.6">
+							<div class="flex flex-col flex-1 gap-2.4 bp:gap-1.2">
+								<div class="flex flex-col gap-1.8 bp:gap-1.2 bp:ml-1.6">
+									<span class="with-grey-box textcol-grey-200">
+										Компактное и надежное решение <br />
+										для обеспечения кислородом
+									</span>
+									<span class="with-grey-box textcol-grey-200"> Выгодная стоимость </span>
+									<span class="with-grey-box textcol-grey-200"> Поставка до 20 дней </span>
+									<span class="with-grey-box textcol-grey-200">
+										Возможность размещения в автономном <br />
+										отапливаемом контейнере
+									</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Производительность (л/мин)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">80</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Чистота газа (%)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">90 – 95.5</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-center w-42 h-42 bp:w-full bp:h-23 overflow-hidden">
+								<img class="h-full w-full bp:h-23" src="/images/products/product9.png" alt="товар" />
+							</div>
+						</div>
+						<div class="flex justify-between items-center">
+							<div class="pb-2 bp:pb-0">
+								<button class="button--text ml-4 bp:ml-1.6">
+									<span>узнать цену</span>
+									<svg class="icon w-2 h-2">
+										<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="flex items-center h-7 px-4 bp:px-1.6 border-l-0.1 border-t-0.1 bordercol-grey-50 border-solid">
+								<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets">подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div data-catalog-expanded-hidden class="flex flex-col border-0.1 bordercol-grey-50 border-solid border-rad-1.2">
+						<div class="px-4 py-2.4 bp:px-1.6 bp:py-1.6 border-b-0.1 bordercol-grey-50 border-solid">
+							<span class="text-3.4 bp:text-2.2 fw-700">
+								Кислородный концентратор <br />
+								промышленный 50 л/мин
+							</span>
+						</div>
+						<div class="flex gap-1 bp:flex-col-rev p-4 bp:p-1.6">
+							<div class="flex flex-col flex-1 gap-2.4 bp:gap-1.2">
+								<div class="flex flex-col gap-1.8 bp:gap-1.2 bp:ml-1.6">
+									<span class="with-grey-box textcol-grey-200">
+										Компактное и надежное решение <br />
+										для обеспечения кислородом
+									</span>
+									<span class="with-grey-box textcol-grey-200"> Выгодная стоимость </span>
+									<span class="with-grey-box textcol-grey-200"> Поставка до 20 дней </span>
+									<span class="with-grey-box textcol-grey-200">
+										Возможность размещения в автономном <br />
+										отапливаемом контейнере
+									</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Производительность (л/мин)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">80</span>
+								</div>
+								<div class="flex flex-col gap-1.8 bp:gap-1.6">
+									<span class="font-ibm text-2.4 fw-600 bp:text-1.8">Чистота газа (%)</span>
+									<span class="textcol-grey-200 tracking-2% bp:text-1.4">90 – 95.5</span>
+								</div>
+							</div>
+							<div class="flex items-center justify-center w-42 h-42 bp:w-full bp:h-23 overflow-hidden">
+								<img class="h-full w-full bp:h-23" src="/images/products/product1.png" alt="товар" />
+							</div>
+						</div>
+						<div class="flex justify-between items-center">
+							<div class="pb-2 bp:pb-0">
+								<button class="button--text ml-4 bp:ml-1.6">
+									<span>узнать цену</span>
+									<svg class="icon w-2 h-2">
+										<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="flex items-center h-7 px-4 bp:px-1.6 border-l-0.1 border-t-0.1 bordercol-grey-50 border-solid">
+								<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets">подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="px-auto mt-8 bp:mt-3.2 bp:mb-5">
+					<button id="dropdown-catalog-expanded-btn" class="button--text mx-auto">
+						<span>смотреть все</span>
+						<svg class="icon w-2 h-2">
+							<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+						</svg>
+					</button>
+				</div>
+			</section>
+
+			<section class="global-padding-x flex bp:flex-col bp:gap-2 pb-4 mb-18 bp:pb-0 bp:mb-6 mt-14 bp:mt-4 relative">
+				<div class="flex flex-col block-with-bracket flex-1 ml-7 bp:ml-0">
+					<span class="font-ibm fw-500 textcol-grey-100 with-grey-box mb-3 bp:mb-1.4 bp:text-1.6 bp:ml-1.6">обратная связь</span>
+					<div class="text-5.4 fw-500 max-w-66 lh-1 bp:text-3">
+						Получите консультацию
+						<span class="textcol-blue">по выбору продукции </span>
+						для ваших задач
+					</div>
+				</div>
+				<div class="flex flex-col flex-1 mt-6 bp:mt-0">
+					<form class="consult-form flex flex-col gap-2.4 bp:gap-2" action="">
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="text" name="name" placeholder="ВАШЕ ИМЯ" autocomplete="name" />
+						</label>
+
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="tel" name="phone" placeholder="ВАШ ТЕЛЕФОН" autocomplete="tel" />
+						</label>
+
+						<label class="consult-form__field">
+							<textarea class="consult-form__control consult-form__textarea h-16" name="task" placeholder="ОПИШИТЕ ЗАДАЧУ"></textarea>
+						</label>
+
+						<button type="submit" class="button--text mt-1.8 bp:mt-2 bp:mx-0">
+							<span>получить консультацию</span>
+							<svg class="icon w-2 h-2">
+								<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<img class="consult__logo-bg" src="/images/logo-bg2.png" alt="лого-бг" />
+			</section>
+		</main>
+
+		@@include('html/footer.html') @@include('html/base/scripts.html')
+	</body>
+</html>

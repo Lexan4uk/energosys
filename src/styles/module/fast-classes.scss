@@ -401,6 +401,10 @@ $fc-tracking: (
 	-webkit-line-clamp: 6;
 }
 
+.self-stretch {
+	align-self: stretch;
+}
+
 /* Spacing + size */
 @each $name, $value in $fc-sizes {
 	$suffix: escape-dot($name);
@@ -702,6 +706,9 @@ $fc-tracking: (
 }
 @include bp-class('lh-1-6') {
 	line-height: 1.6;
+}
+@include bp-class('self-stretch') {
+	align-self: stretch;
 }
 
 @each $clamp in 1, 2, 3, 4, 5, 6 {

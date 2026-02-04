@@ -84,7 +84,6 @@ function catalogListToggle() {
 	const setCollapsed = holder => {
 		const items = holder.querySelectorAll(SELECTOR_ITEM)
 		items.forEach((el, i) => {
-			console.log(el)
 			el.classList.toggle(CLASS_HIDDEN, i >= ITEMS_LIMIT)
 		})
 

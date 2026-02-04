@@ -252,6 +252,7 @@ textarea {
 		border-radius: 1.2rem 0rem 0rem 1.2rem;
 	}
 }
+
 @include media-down($bp) {
 	html {
 		font-size: 10px;
