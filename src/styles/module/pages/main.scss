@@ -19,23 +19,6 @@
 		opacity: 50%;
 		z-index: -1;
 	}
-	&__bracket {
-		position: relative;
-
-		&::after {
-			content: '';
-			position: absolute;
-			top: 1.2rem;
-			left: -7rem;
-			width: 4rem;
-			height: 20.7rem;
-
-			border-left: 0.1rem solid var(--color-grey-50);
-			border-top: 0.1rem solid var(--color-grey-50);
-			border-bottom: 0.1rem solid var(--color-grey-50);
-			border-radius: 1.2rem 0rem 0rem 1.2rem;
-		}
-	}
 	&__category-grid {
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 4rem;
@@ -174,11 +157,6 @@
 			margin-top: -5rem;
 			margin-left: 5.6rem;
 			transform: scaleX(-1);
-		}
-		&__bracket {
-			&::after {
-				display: none;
-			}
 		}
 		&__category-grid {
 			grid-template-columns: 1fr;

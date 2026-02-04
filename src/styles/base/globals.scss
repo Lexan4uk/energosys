@@ -216,7 +216,42 @@ textarea {
 .wrap {
 	white-space: normal;
 }
+.global-input-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 0.2rem solid var(--color-grey-50);
+	padding: 1.6rem 2.2rem 1.6rem 2.2rem;
+	&:focus-within {
+		border-color: var(--color-blue);
+	}
+}
+.global-input {
+	border: none;
+	width: 100%;
+	&::placeholder {
+		font-family: 'IBM Plex Mono';
+		text-transform: uppercase;
+		color: var(--color-grey-50);
+	}
+}
+.block-with-bracket {
+	position: relative;
 
+	&::after {
+		content: '';
+		position: absolute;
+		top: 1.2rem;
+		left: -7rem;
+		width: 4rem;
+		height: 20.7rem;
+
+		border-left: 0.1rem solid var(--color-grey-50);
+		border-top: 0.1rem solid var(--color-grey-50);
+		border-bottom: 0.1rem solid var(--color-grey-50);
+		border-radius: 1.2rem 0rem 0rem 1.2rem;
+	}
+}
 @include media-down($bp) {
 	html {
 		font-size: 10px;
@@ -255,6 +290,17 @@ textarea {
 			gap: 1.2rem;
 			font-size: 1.4rem;
 			font-weight: 600;
+		}
+	}
+	.global-input-wrapper {
+		padding: 1.2rem 1.8rem 1.2rem 1.8rem;
+	}
+	.global-input {
+		font-size: 1.4rem;
+	}
+	.block-with-bracket {
+		&::after {
+			display: none;
 		}
 	}
 }

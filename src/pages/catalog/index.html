@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		@@include('html/base/meta.html',{ "title": "Каталог" }) @@include('html/base/styles.html')
+	</head>
+
+	<body>
+		@@include('html/header.html')
+
+		<main class="catalog flex flex-col pt-8 bp:pt-4 overflow-hidden">
+			<section class="flex flex-col relative global-padding-x">
+				<div class="flex flex-col gap-4 bp:gap-1">
+					<div class="flex justify-between w-full items-center bp:items-start bp:flex-col bp:gap-1">
+						<span class="text-6.4 fw-600 tracking-1 lh-1 bp:text-3.2"> Каталог </span>
+						<form class="global-input-wrapper w-32 bp:w-12">
+							<input class="global-input" type="text" name="search" placeholder="ПОИСК" />
+							<svg class="icon w-2 h-2 textcol-grey-50">
+								<use href="/images/svg/svgs.svg#icon-search"></use>
+							</svg>
+						</form>
+					</div>
+					<span class="text-1.8 bp:text-1.6 tracking-2% max-w-89">Мы предлагаем широкий выбор современного промышленного оборудования для различных сфер производства. В ассортимент входят энергоэффективные газовые установки, надёжное грузоподъёмное и водоочистное оборудование, промышленные компрессоры и насосы, электротехнические системы, а также специализированные решения для технологических процессов. Все изделия отличаются высоким качеством, долговечностью и соответствием современным требованиям промышленности, обеспечивая бесперебойную работу и повышение эффективности предприятий.</span>
+				</div>
+			</section>
+			<section class="mt-8 bp:mt-4">
+				<div class="flex flex-col gap-5 bp:gap-1.6 mb-3">
+					<!--Одна строка-->
+					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0">
+						<!--Один товар + слод его моб дропаута-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product1.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									ЭНЕРГЕТИЧЕСКОЕ<br />
+									И ГАЗОВОЕ ОБОРУДОВАНИЕ
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">01</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-1" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-1"></div>
+						<!--Конец одного товара-->
+						<!--Один товар-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product2.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									Водоочистное<br />
+									оборудование
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">02</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-2" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-2"></div>
+						<!--Конец одного товара-->
+					</div>
+					<span class="catalog__separator only-desktop"></span>
+					<!--Конец Одна строка-->
+					<!--выпадающее 1-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-1">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product1">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--выпадающее 2-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-2">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product1">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product2.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product2.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product2.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product2.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product2.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product2.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--Одна строка-->
+					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0">
+						<!--Один товар + слод его моб дропаута-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product3.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									ПРОМЫШЛЕННОЕ <br />
+									ОБОРУДОВАНИЕ
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">03</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-3" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-3"></div>
+						<!--Конец одного товара-->
+						<!--Один товар-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product4.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									ГРУЗОПОДЪЕМНОЕ <br />
+									ОБОРУДОВАНИЕ
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">04</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-4" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-4"></div>
+						<!--Конец одного товара-->
+					</div>
+					<span class="catalog__separator only-desktop"></span>
+					<!--Конец Одна строка-->
+					<!--выпадающее 1-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-3">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product3">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product3.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--выпадающее 2-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-4">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product4">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product4.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product4.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product4.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product4.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product4.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product4.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--Одна строка-->
+					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0">
+						<!--Один товар + слод его моб дропаута-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product5.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									ЭЛЕКТРОТЕХНИЧЕСКОЕ<br />
+									ОБОРУДОВАНИЕ
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">05</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-5" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-5"></div>
+						<!--Конец одного товара-->
+						<!--Один товар-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product6.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									СПЕЦИАЛИЗИРОВАННОЕ<br />
+									ОБОРУДОВАНИЕ
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">06</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-6" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-6"></div>
+						<!--Конец одного товара-->
+					</div>
+					<span class="catalog__separator only-desktop"></span>
+					<!--Конец Одна строка-->
+					<!--выпадающее 1-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-5">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product3">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product5.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product5.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product5.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product5.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product5.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!--выпадающее 2-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-6">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product3">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product6.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product6.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product6.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product6.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product6.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product6.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<!--Одна строка-->
+					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0">
+						<!--Один товар + слод его моб дропаута-->
+						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
+							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
+								<img class="h-23 w-full" src="/images/products/product1.png" alt="товар" />
+								<span class="font-ibm text-2.4 fw-600 bp:text-1.8">
+									ЭНЕРГЕТИЧЕСКОЕ<br />
+									И ГАЗОВОЕ ОБОРУДОВАНИЕ
+								</span>
+							</div>
+							<div class="flex justify-between border-t-0.1 bordercol-grey-50 items-center border-solid">
+								<span class="font-ibm bp:text-1.6 textcol-grey-100 with-grey-box ml-4 bp:ml-3 py-3 bp:py-1.4 border-r-0.1 bordercol-grey-50 border-solid flex-1">07</span>
+								<button class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6" type="button" data-catalog-dropdown-trigger aria-controls="catalog-dropdown-7" aria-expanded="false">подробнее</button>
+							</div>
+						</div>
+						<div class="catalog__dropdown-slot" data-catalog-dropdown-slot="catalog-dropdown-7"></div>
+						<!--Конец одного товара-->
+					</div>
+					<!--Конец Одна строка-->
+					<!--выпадающее 1-->
+					<div class="catalog__dropdown-list-holder flex flex-col is-collapsed" id="catalog-dropdown-7">
+						<div class="catalog__dropdown-list grid gap-4 bp:gap-1.6 bp:flex global-padding-x h-full bp:pt-1.2 bp:pb-1.2" id="catalog-dropdown-product1">
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+							<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid bp:w-29" data-catalog-item>
+								<div class="flex border-b-0.1 bordercol-grey-50 items-center border-solid bp:border-0">
+									<span class="font-ibm text-2.4 fw-500 bp:text-1.8 py-2.4 bp:py-1.6 px-1.2 bp:px-1.6 text-center bp:text-left">Кислородные концентраторы различной производительности</span>
+								</div>
+								<img class="p-2 bp:p-1.6 h-39 bp:h-full bp:w-23" src="/images/products/product1.png" alt="товар 1" />
+								<div class="flex border-t-0.1 bordercol-grey-50 items-center justify-center border-solid">
+									<a href="/" target="_blank" class="font-ibm bp:text-1.4 textcol-blue with-blue-brackets h-full px-4 bp:px-1.6 py-2.8 bp:py-1.2">подробнее</a>
+								</div>
+							</div>
+						</div>
+						<div class="global-padding-x">
+							<button data-catalog-toggle aria-expanded="false" class="button--text mt-8 bp:mt-2 mx-auto bp:mx-0">
+								<span>смотреть все</span>
+								<svg class="icon w-2 h-2">
+									<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="global-padding-x flex bp:flex-col bp:gap-2 pb-4 mb-18 bp:pb-0 bp:mb-6 mt-14 bp:mt-4 relative">
+				<div class="flex flex-col block-with-bracket flex-1 ml-7 bp:ml-0">
+					<span class="font-ibm fw-500 textcol-grey-100 with-grey-box mb-3 bp:mb-1.4 bp:text-1.6 bp:ml-1.6">обратная связь</span>
+					<div class="text-5.4 fw-500 max-w-66 lh-1 bp:text-3">
+						Получите консультацию
+						<span class="textcol-blue">по выбору продукции </span>
+						для ваших задач
+					</div>
+				</div>
+				<div class="flex flex-col flex-1 mt-6 bp:mt-0">
+					<form class="consult-form flex flex-col gap-2.4 bp:gap-2" action="">
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="text" name="name" placeholder="ВАШЕ ИМЯ" autocomplete="name" />
+						</label>
+
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="tel" name="phone" placeholder="ВАШ ТЕЛЕФОН" autocomplete="tel" />
+						</label>
+
+						<label class="consult-form__field">
+							<textarea class="consult-form__control consult-form__textarea h-16" name="task" placeholder="ОПИШИТЕ ЗАДАЧУ"></textarea>
+						</label>
+
+						<button type="submit" class="button--text mt-1.8 bp:mt-2 bp:mx-0">
+							<span>получить консультацию</span>
+							<svg class="icon w-2 h-2">
+								<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<img class="catalog__logo-bg" src="/images/logo-bg2.png" alt="лого-бг" />
+			</section>
+		</main>
+
+		@@include('html/footer.html') @@include('html/base/scripts.html')
+	</body>
+</html>

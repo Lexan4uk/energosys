@@ -45,35 +45,35 @@
 		z-index: 5;
 		position: relative;
 	}
-	.consult-form {
-		&__field {
-			display: block;
+}
+.consult-form {
+	&__field {
+		display: block;
+	}
+
+	&__control {
+		width: 100%;
+		border: 0.1rem solid var(--color-grey-50);
+		background: #ffffff00;
+		padding: 1.3rem 1.8rem; // y / x
+		outline: none;
+		font: inherit;
+		box-sizing: border-box;
+
+		&::placeholder {
+			font-family: 'IBM Plex Mono';
+			text-transform: uppercase;
+			color: var(--color-grey-50);
 		}
 
-		&__control {
-			width: 100%;
-			border: 0.2rem solid var(--color-grey-50);
-			background: #ffffff00;
-			padding: 1.3rem 1.8rem; // y / x
-			outline: none;
-			font: inherit;
-			box-sizing: border-box;
-
-			&::placeholder {
-				font-family: 'IBM Plex Mono';
-				text-transform: uppercase;
-				color: var(--color-grey-50);
-			}
-
-			&:focus {
-				border-color: var(--color-blue);
-			}
+		&:focus {
+			border-color: var(--color-blue);
 		}
+	}
 
-		&__textarea {
-			height: 26rem;
-			resize: none;
-		}
+	&__textarea {
+		height: 26rem;
+		resize: none;
 	}
 }
 @include media-down($bp) {

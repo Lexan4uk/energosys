@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function(){
     @@include('module/mobile-dropdown-button.js')
     @@include('module/footer-map.js')
     @@include('module/custom-scroll.js')
-    @@include('module/main-toggle-categories.js')
-    @@include('module/main-swiper.js')
+    @@include('module/main-scripts.js')
     @@include('module/consult-modal.js')
     @@include('module/cookies-modal.js')
+    @@include('module/catalog-scripts.js')
+
     
 })

@@ -228,8 +228,29 @@ $fc-tracking: (
 .flex-col {
 	flex-direction: column;
 }
+.flex-row-rev {
+	flex-direction: row-reverse;
+}
+.flex-col-rev {
+	flex-direction: column-reverse;
+}
 .flex-wrap {
 	flex-wrap: wrap;
+}
+.flex-1 {
+	flex: 1;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-3 {
+	flex: 3;
+}
+.flex-4 {
+	flex: 4;
+}
+.flex-5 {
+	flex: 5;
 }
 
 .items-start {
@@ -289,7 +310,12 @@ $fc-tracking: (
 .overflow-auto {
 	overflow: auto;
 }
-
+.overflow-x-auto {
+	overflow-x: auto;
+}
+.overflow-y-auto {
+	overflow-y: auto;
+}
 /* Typography */
 .text-left {
 	text-align: left;
@@ -541,8 +567,29 @@ $fc-tracking: (
 @include bp-class('flex-col') {
 	flex-direction: column;
 }
+@include bp-class('flex-row-rev') {
+	flex-direction: row-reverse;
+}
+@include bp-class('flex-col-rev') {
+	flex-direction: column-reverse;
+}
 @include bp-class('flex-wrap') {
 	flex-wrap: wrap;
+}
+@include bp-class('flex-1') {
+	flex: 1;
+}
+@include bp-class('flex-2') {
+	flex: 2;
+}
+@include bp-class('flex-3') {
+	flex: 3;
+}
+@include bp-class('flex-4') {
+	flex: 4;
+}
+@include bp-class('flex-5') {
+	flex: 5;
 }
 
 @include bp-class('items-start') {
@@ -598,6 +645,12 @@ $fc-tracking: (
 }
 @include bp-class('overflow-auto') {
 	overflow: auto;
+}
+@include bp-class('overflow-y-auto') {
+	overflow-y: auto;
+}
+@include bp-class('overflow-x-auto') {
+	overflow-x: auto;
 }
 
 @include bp-class('text-left') {

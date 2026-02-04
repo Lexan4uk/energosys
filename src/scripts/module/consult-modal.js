@@ -1,7 +1,6 @@
 function consultModal() {
 	const modal = document.getElementById('consult-modal')
 	if (!modal) return
-	console.log(modal)
 
 	const lockScroll = () => {
 		document.documentElement.style.overflow = 'hidden'
@@ -23,7 +22,6 @@ function consultModal() {
 		unlockScroll()
 	}
 
-	// клики: открыть / закрыть (делегирование)
 	document.addEventListener('click', e => {
 		const target = e.target
 
@@ -39,15 +37,12 @@ function consultModal() {
 	})
 
 	document.addEventListener('keydown', e => {
-		console.log('asa')
-
 		if (e.key === 'Escape' && modal.classList.contains('is-open')) {
 			close()
 		}
 	})
 }
 
-// запуск строго после того, как DOM собран
 if (document.readyState === 'loading') {
 	document.addEventListener('DOMContentLoaded', consultModal)
 } else {
