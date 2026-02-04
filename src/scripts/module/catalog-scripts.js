@@ -124,6 +124,26 @@ function catalogListToggle() {
 
 	init()
 }
+function catalogLineDropToggle() {
+	const BTN_ID = 'dropdown-list-line-drop-btn'
+	const TARGET_CLASS = 'catalog__dropdown-list-line-drop'
+	const CLASS_OPEN = 'is-open'
 
+	const btn = document.getElementById(BTN_ID)
+	if (!btn) return
+
+	btn.addEventListener('click', () => {
+		const isOpen = btn.classList.toggle(CLASS_OPEN)
+
+		document.querySelectorAll(`.${TARGET_CLASS}`).forEach(el => {
+			el.style.display = isOpen ? 'flex' : ''
+		})
+
+		const span = btn.querySelector('span')
+		if (span) span.textContent = isOpen ? 'скрыть категории' : 'все категории'
+	})
+}
+
+catalogLineDropToggle()
 catalogDropdown()
 catalogListToggle()

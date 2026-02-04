@@ -23,7 +23,7 @@
 				</div>
 			</section>
 			<section class="mt-8 bp:mt-4">
-				<div class="flex flex-col gap-5 bp:gap-1.6 mb-3">
+				<div class="flex flex-col gap-5 bp:gap-1.6 mb-3 bp:mb-0">
 					<!--Одна строка-->
 					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0">
 						<!--Один товар + слод его моб дропаута-->
@@ -570,9 +570,8 @@
 							</button>
 						</div>
 					</div>
-
 					<!--Одна строка-->
-					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0">
+					<div class="catalog__dropdown-list-line bp:flex bp:flex-col gap-4 bp:gap-1.6 global-padding-x bp:px-0 catalog__dropdown-list-line-drop">
 						<!--Один товар + слод его моб дропаута-->
 						<div class="flex flex-col border-0.1 bordercol-grey-50 border-rad-1 border-solid flex-1 bp:mx-2.2">
 							<div class="flex bp:flex-col-rev gap-6.4 p-2.4 bp:p-1.6 items-center bp:items-start">
@@ -676,6 +675,14 @@
 								</svg>
 							</button>
 						</div>
+					</div>
+					<div class="global-padding-x only-mobile">
+						<button id="dropdown-list-line-drop-btn" class="button--text mx-auto">
+							<span>все категории</span>
+							<svg class="icon w-2 h-2">
+								<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</section>

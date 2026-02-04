@@ -52,7 +52,12 @@
 		}
 		&__dropdown-list-line {
 			display: flex;
-			grid-template-columns: 1fr 1fr;
+			&-drop {
+				display: none;
+				&.is-open {
+					display: flex;
+				}
+			}
 		}
 		&__logo-bg {
 			height: 22rem;
