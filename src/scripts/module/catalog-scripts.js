@@ -1,5 +1,5 @@
 function catalogDropdown() {
-	const BP_PX = 768 // <- замени на свой $bp в px
+	const BP_PX = 768
 
 	const SELECTOR_TRIGGER = '[data-catalog-dropdown-trigger]'
 	const SELECTOR_SLOT = '[data-catalog-dropdown-slot]'

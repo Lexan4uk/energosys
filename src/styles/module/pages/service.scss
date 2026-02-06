@@ -1,0 +1,28 @@
+.service {
+	&__main-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr;
+		&-text {
+			grid-column: 1;
+		}
+		&-img {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+		}
+	}
+}
+@include media-down($bp) {
+	.service {
+		&__main-grid {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+			&-text {
+				grid-column: 1;
+			}
+			&-img {
+				grid-column: 1;
+				grid-row: 2;
+			}
+		}
+	}
+}

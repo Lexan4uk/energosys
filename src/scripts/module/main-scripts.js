@@ -54,7 +54,7 @@ function mainToggleCategories() {
 		el.style.overflow = 'hidden'
 		el.style.willChange = 'opacity, transform'
 		el.style.opacity = '0'
-		el.style.transform = 'translateY(10px)'
+		el.style.transform = 'translateY(0.1rem)'
 		el.style.transition = 'none'
 		void el.offsetHeight
 		el.style.transition = `opacity ${DURATION}ms ${EASING}, transform ${DURATION}ms ${EASING}`
@@ -71,7 +71,7 @@ function mainToggleCategories() {
 		el.style.willChange = 'opacity, transform'
 		el.style.transition = `opacity ${DURATION}ms ${EASING}, transform ${DURATION}ms ${EASING}`
 		el.style.opacity = '0'
-		el.style.transform = 'translateY(10px)'
+		el.style.transform = 'translateY(0.1rem)'
 		setTimeout(() => hideInstant(el), DURATION)
 	}
 

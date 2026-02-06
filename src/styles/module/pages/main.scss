@@ -115,6 +115,7 @@
 		.main__swiper-alias {
 			opacity: 0;
 			margin-left: auto;
+			transition: all 0.5s ease;
 		}
 	}
 	.swiper-slide-prev {
@@ -126,6 +127,7 @@
 			position: absolute;
 			right: 0;
 			opacity: 1;
+			transition: all 0.5s ease;
 		}
 	}
 	.swiper-slide-next {

@@ -113,9 +113,15 @@ textarea {
 		}
 	}
 }
+.centered {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
 .with {
 	&-blue-box,
-	&-grey-box {
+	&-grey-box,
+	&-dark-box {
 		position: relative;
 
 		&::before {
@@ -139,6 +145,11 @@ textarea {
 	&-grey-box {
 		&::before {
 			background-color: var(--color-grey-100);
+		}
+	}
+	&-dark-box {
+		&::before {
+			background-color: var(--color-dark);
 		}
 	}
 	&-blue-brackets {
@@ -303,5 +314,17 @@ textarea {
 		&::after {
 			display: none;
 		}
+	}
+}
+@include media-up($_4k) {
+	html {
+		font-size: 20px;
+	}
+
+	.global-padding-x {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $_4k;
+		width: 100%;
 	}
 }

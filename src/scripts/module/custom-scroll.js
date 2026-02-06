@@ -2,7 +2,6 @@ function customScroll() {
 	const CONFIG = {
 		side: 'right',
 		offset: 1, // отступ от края
-		trackWidth: 28, // ширина области (под 23px big tick + запас)
 		tickGap: 8, // расстояние между палочками
 		small: { w: 12, h: 1 },
 		big: { w: 23, h: 1 },
@@ -30,8 +29,8 @@ function customScroll() {
         position: fixed;
         top: 0;
         bottom: 0;
-        ${CONFIG.side}: ${CONFIG.offset}px;
-        width: ${CONFIG.trackWidth}px;
+        ${CONFIG.side}: 0.${CONFIG.offset}rem;
+        width: 2.8rem;
         z-index: ${CONFIG.zIndex};
         pointer-events: none;
       }
@@ -43,29 +42,29 @@ function customScroll() {
         flex-direction: column;
         align-items: flex-end;
         justify-content: flex-start;
-        gap: ${CONFIG.tickGap}px;
+        gap: 0.${CONFIG.tickGap}rem;
       }
 
       .csb-tick{
-        height: 1px;
+        height: 0.1rem;
         background: ${CONFIG.colorVar};
         opacity: 1;
         flex: 0 0 auto;
       }
-      .csb-tick--small{ width: ${CONFIG.small.w}px; }
-      .csb-tick--big{ width: ${CONFIG.big.w}px; }
+      .csb-tick--small{ width: ${CONFIG.small.w / 10}rem; }
+      .csb-tick--big{ width: ${CONFIG.big.w / 10}rem; }
 
       .csb-indicator{
         position: absolute;
         ${CONFIG.side}: 0;
         top: 0;
         transform: translateY(0);
-        width: 18px;
-        height: 18px;
-				margin-right: 28px;
+        width: 1.8rem;
+        height: 1.8rem;
+				margin-right: 2.8rem;
         display: grid;
         place-items: center;
-        pointer-events: auto; /* чтобы можно было перетаскивать */
+        pointer-events: auto;
         cursor: grab;
         user-select: none;
         touch-action: none;
@@ -77,7 +76,6 @@ function customScroll() {
         height: 2rem;
         display: block;
         fill: none;
-        /* если твоя стрелка смотрит не туда — подправь rotate */
         transform: rotate(0deg);
       }
     `
@@ -153,7 +151,7 @@ function customScroll() {
 		const maxY = Math.max(minY, rootRect.height - bottomPad - indRect.height)
 
 		const y = minY + prog * (maxY - minY)
-		els.indicator.style.top = `${y}px`
+		els.indicator.style.top = `${y / 10}rem`
 	}
 
 	function enableDrag() {
