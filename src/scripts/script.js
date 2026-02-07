@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", function(){
     @@include('module/cookies-modal.js')
     @@include('module/catalog-scripts.js')
     @@include('module/catalog-expanded-script.js')
-    
+    @@include('module/service-script.js')
 })
