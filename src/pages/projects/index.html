@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		@@include('html/base/meta.html',{ "title": "Проекты" }) @@include('html/base/styles.html')
+	</head>
+
+	<body>
+		@@include('html/header.html')
+
+		<main class="service flex flex-col pt-8 bp:pt-4 global-padding-x">
+			<section class="flex w-full justify-between bp:flex-col">
+				<span class="text-6.4 fw-600 tracking-1 lh-1 bp:text-3.2">
+					Представляем наши<br />
+					самые <span class="textcol-blue">ключевые проекты</span>
+				</span>
+				<span class="text-1.8 bp:text-1.6 tracking-2% bp:mt-2 max-w-56"> Компания выполняет полный цикл проектирования и внедрения газогенераторных установок — от предпроектных расчетов до пуско-наладочных работ. Мы реализуем решения для предприятий различных отраслей: металлургии, нефтехимии, энергетики и машиностроения. Каждая станция проектируется с учётом специфики технологического процесса заказчика и условий эксплуатации. </span>
+			</section>
+			<!--Первый блок для десктопа-->
+			<section class="mt-0 bp:mt-11 only-desktop flex-col gap-8 bp:gap-0">
+				<div class="py-4 flex gap-4" data-projects-slider>
+					<div class="flex flex-col">
+						<span class="text-3.4 bp:text-2.2 fw-700 line-clamp-3 lh-1">
+							Блочно-модульные <br />
+							станции
+						</span>
+						<span class="font-ibm textcol-blue with-blue-box mt-6.8 ml-1.2">Арктик СПГ 2</span>
+						<span class="mt-10 tracking-2% max-w-59">
+							Проект «Арктик СПГ 2» включал разработку инженерных решений для северных промышленных объектов с повышенными требованиями к безопасности и надежности. Основная задача — обеспечить бесперебойную работу систем электроснабжения и автоматизации в условиях экстремально низких температур.
+							<br />
+							<br />
+							В процессе реализовано проектирование и интеграция структурированных кабельных систем, установка шкафного оборудования и промышленных контроллеров, а также внедрение сетевой инфраструктуры. Решения полностью адаптированы под климатические нагрузки и стандарты промышленной безопасности, что гарантирует долговечность и устойчивость оборудования.
+						</span>
+						<a href="/" class="font-ibm textcol-blue with-blue-brackets mt-6">подробнее</a>
+						<div class="flex gap-1.8 mt-6">
+							<button data-swipe-prev>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button data-swipe-next>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="projects__grid-1 grid gap-4 h-76 flex-1">
+						<div class="projects__grid-1_block projects__grid-1_block-1 h-full" data-swipe-slot></div>
+						<div class="projects__grid-1_block projects__grid-1_block-2 h-full" data-swipe-slot></div>
+						<div class="projects__grid-1_block projects__grid-1_block-3 h-full" data-swipe-slot></div>
+					</div>
+					<!--Невидимое хранилище картинок для 1-->
+					<div class="projects__img-stack">
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper1.png" alt="Слайд" />
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper2.png" alt="Слайд" />
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper3.png" alt="Слайд" />
+					</div>
+				</div>
+				<div class="py-4 flex gap-4" data-projects-slider>
+					<div class="flex flex-col">
+						<span class="text-3.4 bp:text-2.2 fw-700 line-clamp-3 lh-1"> Азотные станции </span>
+						<span class="font-ibm textcol-blue with-blue-box mt-5.4 ml-1.2">Восток Азот</span>
+						<span class="mt-10 tracking-2% max-w-59"> Проект предусматривал разработку и установку адсорбционной азотной станции для обеспечения технологических процессов на химическом предприятии. Станция спроектирована с учётом повышенных требований к чистоте газа и энергоэффективности оборудования. </span>
+						<a href="/" class="font-ibm textcol-blue with-blue-brackets mt-8">подробнее</a>
+						<div class="flex gap-1.8 mt-auto">
+							<button data-swipe-prev>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button data-swipe-next>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="projects__grid-2 grid gap-4 h-76 flex-1">
+						<div class="projects__grid-2_block projects__grid-2_block-1 h-full" data-swipe-slot></div>
+						<div class="projects__grid-2_block projects__grid-2_block-2 h-full">
+							<span class="tracking-2% max-w-59"> Реализовано проектирование блочно-модульной конструкции, интеграция систем осушки и фильтрации, а также внедрение автоматизированного управления под контролем ПЛК. Решение позволило снизить эксплуатационные расходы и обеспечить стабильную подачу азота в круглосуточном режиме. </span>
+						</div>
+						<div class="projects__grid-2_block projects__grid-2_block-3 h-full" data-swipe-slot></div>
+					</div>
+					<!--Невидимое хранилище картинок для 2-->
+					<div class="projects__img-stack">
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper4.png" alt="Слайд" />
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper5.png" alt="Слайд" />
+					</div>
+				</div>
+				<div class="py-4 flex gap-4" data-projects-slider>
+					<div class="flex flex-col">
+						<span class="text-3.4 bp:text-2.2 fw-700 line-clamp-3 lh-1">
+							Кислородные <br />
+							станции
+						</span>
+						<span class="font-ibm textcol-blue with-blue-box mt-6.8 ml-1.2">ТехГаз О₂</span>
+						<span class="mt-17 tracking-2% max-w-59"> В рамках проекта разработан комплекс генерации и распределения кислорода, предназначенный для металлургического цикла производства. Особое внимание уделено надежности оборудования и поддержанию стабильного давления подачи газа</span>
+						<a href="/" class="font-ibm textcol-blue with-blue-brackets mt-8">подробнее</a>
+						<div class="flex gap-1.8 mt-auto">
+							<button data-swipe-prev>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button data-swipe-next>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="projects__grid-3 grid gap-4 h-76 flex-1">
+						<div class="projects__grid-3_block projects__grid-3_block-1 h-full" data-swipe-slot></div>
+						<div class="projects__grid-3_block projects__grid-3_block-2 h-full">
+							<span class="tracking-2% max-w-59"> Реализовано проектирование блочно-модульной конструкции, интеграция систем осушки и фильтрации, а также внедрение автоматизированного управления под контролем ПЛК. Решение позволило снизить эксплуатационные расходы и обеспечить стабильную подачу азота в круглосуточном режиме. </span>
+						</div>
+						<div class="projects__grid-3_block projects__grid-3_block-3 h-full" data-swipe-slot></div>
+					</div>
+					<!--Невидимое хранилище картинок для 3-->
+					<div class="projects__img-stack">
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper6.png" alt="Слайд" />
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper7.png" alt="Слайд" />
+					</div>
+				</div>
+				<div class="py-4 flex gap-4 hidden" data-projects-slider>
+					<div class="flex flex-col">
+						<span class="text-3.4 bp:text-2.2 fw-700 line-clamp-3 lh-1">
+							Кислородные <br />
+							станции
+						</span>
+						<span class="font-ibm textcol-blue with-blue-box mt-6.8 ml-1.2">ТехГаз О₂</span>
+						<span class="mt-17 tracking-2% max-w-59"> В рамках проекта разработан комплекс генерации и распределения кислорода, предназначенный для металлургического цикла производства. Особое внимание уделено надежности оборудования и поддержанию стабильного давления подачи газа</span>
+						<a href="/" class="font-ibm textcol-blue with-blue-brackets mt-8">подробнее</a>
+						<div class="flex gap-1.8 mt-auto">
+							<button data-swipe-prev>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button data-swipe-next>
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="projects__grid-3 grid gap-4 h-76 flex-1">
+						<div class="projects__grid-3_block projects__grid-3_block-1 h-full" data-swipe-slot></div>
+						<div class="projects__grid-3_block projects__grid-3_block-2 h-full">
+							<span class="tracking-2% max-w-59"> Реализовано проектирование блочно-модульной конструкции, интеграция систем осушки и фильтрации, а также внедрение автоматизированного управления под контролем ПЛК. Решение позволило снизить эксплуатационные расходы и обеспечить стабильную подачу азота в круглосуточном режиме. </span>
+						</div>
+						<div class="projects__grid-3_block projects__grid-3_block-3 h-full" data-swipe-slot></div>
+					</div>
+					<!--Невидимое хранилище картинок для 3-->
+					<div class="projects__img-stack">
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper6.png" alt="Слайд" />
+						<img class="absolute h-full w-full centered cover" data-swipe-src src="/images/products/projects-swiper7.png" alt="Слайд" />
+					</div>
+				</div>
+				<div class="w-full flex justify-center">
+					<button data-toggle-btn data-toggle-target="[data-projects-slider].hidden" data-toggle-open-text="скрыть" data-toggle-close-text="показать ещё" class="button--text" class="button--text">
+						<span>показать ещё</span>
+						<svg class="icon w-2 h-2">
+							<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+						</svg>
+					</button>
+				</div>
+			</section>
+			<!--Первый блок для мобайла-->
+			<section class="only-mobile mt-9 flex-col">
+				<div class="py-2 flex gap-4 flex-col" data-mob-project>
+					<span class="text-2.2 fw-700 line-clamp-3 lh-1">
+						Блочно-модульные <br />
+						станции
+					</span>
+					<span class="font-ibm textcol-blue with-blue-box ml-1.2 bp:text-1.6">Арктик СПГ 2</span>
+					<div class="flex flex-col overflow-hidden">
+						<div class="flex gap-1.8 ml-auto">
+							<button class="projects__mob-slider-prev">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button class="projects__mob-slider-next">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="projects__mob-swiper h-30 mt-2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper1.png" alt="Слайд" />
+								</div>
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper2.png" alt="Слайд" />
+								</div>
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper3.png" alt="Слайд" />
+								</div>
+							</div>
+						</div>
+
+						<span class="mt-2 tracking-2% text-1.6">
+							Проект «Арктик СПГ 2» включал разработку инженерных решений для северных промышленных объектов с повышенными требованиями к безопасности и надежности. Основная задача — обеспечить бесперебойную работу систем электроснабжения и автоматизации в условиях экстремально низких температур.
+							<br />
+							<br />
+							В процессе реализовано проектирование и интеграция структурированных кабельных систем, установка шкафного оборудования и промышленных контроллеров, а также внедрение сетевой инфраструктуры. Решения полностью адаптированы под климатические нагрузки и стандарты промышленной безопасности, что гарантирует долговечность и устойчивость оборудования.
+						</span>
+					</div>
+					<a href="/" class="font-ibm textcol-blue with-blue-brackets text-1.4">подробнее</a>
+				</div>
+				<div class="py-2 flex gap-4 flex-col" data-mob-project>
+					<span class="text-2.2 fw-700 line-clamp-3 lh-1"> Азотные станции </span>
+					<span class="font-ibm textcol-blue with-blue-box ml-1.2 bp:text-1.6">Восток Азот</span>
+					<div class="flex flex-col overflow-hidden">
+						<div class="flex gap-1.8 ml-auto">
+							<button class="projects__mob-slider-prev">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button class="projects__mob-slider-next">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="projects__mob-swiper h-30 mt-2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper4.png" alt="Слайд" />
+								</div>
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper5.png" alt="Слайд" />
+								</div>
+							</div>
+						</div>
+
+						<span class="mt-2 tracking-2% text-1.6">
+							Проект предусматривал разработку и установку адсорбционной азотной станции для обеспечения технологических процессов на химическом предприятии. Станция спроектирована с учётом повышенных требований к чистоте газа и энергоэффективности оборудования.
+							<br />
+							<br />
+							Реализовано проектирование блочно-модульной конструкции, интеграция систем осушки и фильтрации, а также внедрение автоматизированного управления под контролем ПЛК. Решение позволило снизить эксплуатационные расходы и обеспечить стабильную подачу азота в круглосуточном режиме.
+						</span>
+					</div>
+					<a href="/" class="font-ibm textcol-blue with-blue-brackets text-1.4">подробнее</a>
+				</div>
+				<div class="py-2 flex gap-4 flex-col" data-mob-project>
+					<span class="text-2.2 fw-700 line-clamp-3 lh-1">
+						Кислородные <br />
+						станции
+					</span>
+					<span class="font-ibm textcol-blue with-blue-box ml-1.2 bp:text-1.6">ТехГаз О₂</span>
+					<div class="flex flex-col overflow-hidden">
+						<div class="flex gap-1.8 ml-auto">
+							<button class="projects__mob-slider-prev">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button class="projects__mob-slider-next">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="projects__mob-swiper h-30 mt-2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper6.png" alt="Слайд" />
+								</div>
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper7.png" alt="Слайд" />
+								</div>
+							</div>
+						</div>
+
+						<span class="mt-2 tracking-2% text-1.6">
+							В рамках проекта разработан комплекс генерации и распределения кислорода, предназначенный для металлургического цикла производства. Особое внимание уделено надёжности оборудования и поддержанию стабильного давления подачи газа
+							<br />
+							<br />
+							Выполнено проектирование генераторной установки, системы хранения и подачи кислорода, а также внедрена система автоматического контроля параметров. Комплекс обеспечивает бесперебойную работу производственных процессов и соответствует требованиям промышленной безопасности.
+						</span>
+					</div>
+					<a href="/" class="font-ibm textcol-blue with-blue-brackets text-1.4">подробнее</a>
+				</div>
+				<div class="py-2 flex gap-4 flex-col hidden" data-mob-project>
+					<span class="text-2.2 fw-700 line-clamp-3 lh-1">
+						Кислородные <br />
+						станции
+					</span>
+					<span class="font-ibm textcol-blue with-blue-box ml-1.2 bp:text-1.6">ТехГаз О₂</span>
+					<div class="flex flex-col overflow-hidden">
+						<div class="flex gap-1.8 ml-auto">
+							<button class="projects__mob-slider-prev">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button class="projects__mob-slider-next">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="projects__mob-swiper h-30 mt-2">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper6.png" alt="Слайд" />
+								</div>
+								<div class="swiper-slide relative overflow-hidden">
+									<img class="absolute h-full w-auto centered" data-swipe-src src="/images/products/projects-swiper7.png" alt="Слайд" />
+								</div>
+							</div>
+						</div>
+
+						<span class="mt-2 tracking-2% text-1.6">
+							В рамках проекта разработан комплекс генерации и распределения кислорода, предназначенный для металлургического цикла производства. Особое внимание уделено надёжности оборудования и поддержанию стабильного давления подачи газа
+							<br />
+							<br />
+							Выполнено проектирование генераторной установки, системы хранения и подачи кислорода, а также внедрена система автоматического контроля параметров. Комплекс обеспечивает бесперебойную работу производственных процессов и соответствует требованиям промышленной безопасности.
+						</span>
+					</div>
+					<a href="/" class="font-ibm textcol-blue with-blue-brackets text-1.4">подробнее</a>
+				</div>
+				<div class="w-full flex justify-center mt-2">
+					<button data-toggle-btn data-toggle-target="[data-mob-project].hidden" data-toggle-open-text="скрыть" data-toggle-close-text="показать ещё" class="button--text" class="button--text">
+						<span>показать ещё</span>
+						<svg class="icon w-2 h-2">
+							<use href="/images/svg/svgs.svg#icon-arrow-bottom"></use>
+						</svg>
+					</button>
+				</div>
+			</section>
+
+			<section class="flex bp:flex-col bp:gap-2 pb-4 bp:pb-6 bp:pb-0 mt-14 bp:mt-11 relative">
+				<div class="flex flex-col block-with-bracket flex-1 ml-7 bp:ml-0">
+					<span class="font-ibm fw-500 textcol-grey-100 with-grey-box mb-3 bp:mb-1.4 bp:text-1.6 bp:ml-1.6">обратная связь</span>
+					<div class="text-5.4 fw-500 max-w-66 lh-1 bp:text-3">
+						Получите консультацию
+						<span class="textcol-blue">по выбору продукции </span>
+						для ваших задач
+					</div>
+				</div>
+				<div class="flex flex-col flex-1 mt-6 bp:mt-0">
+					<form class="consult-form flex flex-col gap-2.4 bp:gap-2" action="">
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="text" name="name" placeholder="ВАШЕ ИМЯ" autocomplete="name" />
+						</label>
+
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="tel" name="phone" placeholder="ВАШ ТЕЛЕФОН" autocomplete="tel" />
+						</label>
+
+						<label class="consult-form__field">
+							<textarea class="consult-form__control consult-form__textarea h-16" name="task" placeholder="ОПИШИТЕ ЗАДАЧУ"></textarea>
+						</label>
+
+						<button type="submit" class="button--text mt-1.8 bp:mt-2 bp:mx-0">
+							<span>получить консультацию</span>
+							<svg class="icon w-2 h-2">
+								<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<img class="consult__logo-bg" src="/images/logo-bg2.png" alt="лого-бг" />
+			</section>
+		</main>
+
+		@@include('html/footer.html') @@include('html/base/scripts.html')
+	</body>
+</html>
