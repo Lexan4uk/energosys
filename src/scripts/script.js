@@ -14,5 +14,5 @@ document.addEventListener("DOMContentLoaded", function(){
     @@include('module/catalog-expanded-script.js')
     @@include('module/service-script.js')
     @@include('module/projects-script.js')
-    
+    @@include('module/project-script.js')
 })

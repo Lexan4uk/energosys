@@ -1,0 +1,20 @@
+.project {
+	&__grid {
+		grid-template-columns: auto 1fr;
+	}
+	&__grid-img {
+		grid-row: 1 / span 2;
+		grid-column: 2;
+	}
+}
+@include media-down($bp) {
+	.project {
+		&__grid {
+			grid-template-columns: 1fr;
+		}
+		&__grid-img {
+			grid-row: 2;
+			grid-column: 1;
+		}
+	}
+}
