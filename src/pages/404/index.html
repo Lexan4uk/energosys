@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		@@include('html/base/meta.html',{ "title": "Ошибка" }) @@include('html/base/styles.html')
+	</head>
+
+	<body class="minh-100vh flex flex-col">
+		@@include('html/header.html')
+
+		<main class="404 flex flex-col pt-3 bp:pt-4 global-padding-x mb-auto">
+			<div class="flex flex-col bp:gap-2 mx-auto">
+				<div class="h-66 w-100 relative bp:w-full bp:h-22">
+					<img class="absolute centered w-full h-full" src="/images/404.png" alt="ошибка 404" />
+				</div>
+				<span class="lh-1 fw-700 text-3.4 bp:text-2.2 mt-3 max-w-72 bp:max-w-30 text-center mx-auto bp:mt-0">
+					Кажется такой страницы <span class="textcol-blue">не существует</span>. <br />
+					Проверьте данные или вернитесь <br />
+					на <span class="textcol-blue">главную страницу</span>
+				</span>
+				<a href="/" class="button--text mt-6 mx-auto bp:mt-0 mb-6">
+					<span>На главную</span>
+					<svg class="icon w-2 h-2">
+						<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+					</svg>
+				</a>
+			</div>
+		</main>
+
+		@@include('html/footer.html') @@include('html/base/scripts.html')
+	</body>
+</html>

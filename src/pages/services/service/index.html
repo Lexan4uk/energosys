@@ -293,7 +293,7 @@
 				</button>
 			</section>
 
-			<section class="global-padding-x flex bp:flex-col bp:gap-2 pb-4 bp:pb-6 bp:pb-0 mt-14 bp:mt-11 relative">
+			<section class="global-padding-x flex bp:flex-col bp:gap-2 pb-4 bp:pb-6 mb-18 bp:pb-0 bp:mb-6 mt-14 bp:mt-11 relative">
 				<div class="flex flex-col block-with-bracket flex-1 ml-7 bp:ml-0">
 					<span class="font-ibm fw-500 textcol-grey-100 with-grey-box mb-3 bp:mb-1.4 bp:text-1.6 bp:ml-1.6">обратная связь</span>
 					<div class="text-5.4 fw-500 max-w-66 lh-1 bp:text-3">
@@ -328,6 +328,6 @@
 			</section>
 		</main>
 
-		@@include('html/footer.html') @@include('html/base/scripts.html')
+		@@include('html/footer.html') @@include('html/base/scripts.html', { "pageScript": "service.js", "useSwiper": true })
 	</body>
 </html>

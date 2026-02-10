@@ -1,14 +1,18 @@
-const serviceSwiper = new Swiper('.service__swiper', {
-	slidesPerView: 'auto',
-	centeredSlides: false,
-	loop: true,
-	speed: 600,
+function serviceSwiperInit() {
+	if (typeof Swiper === 'undefined') return
+	const serviceSwiper = new Swiper('.service__swiper', {
+		slidesPerView: 'auto',
+		centeredSlides: false,
+		loop: true,
+		speed: 600,
 
-	navigation: {
-		nextEl: '.service__nav .swiper-button-next-custom',
-		prevEl: '.service__nav .swiper-button-prev-custom'
-	}
-})
+		navigation: {
+			nextEl: '.service__nav .swiper-button-next-custom',
+			prevEl: '.service__nav .swiper-button-prev-custom'
+		}
+	})
+}
+
 function serviceCategoriesToggle() {
 	const BTN_SELECTOR = '[data-service-toggle]'
 	const TARGET_SELECTOR = '.main__category-grid .hidden-on-mobile'
@@ -31,4 +35,5 @@ function serviceCategoriesToggle() {
 		if (span) span.textContent = isOpen ? 'скрыть категории' : 'все категории'
 	})
 }
+serviceSwiperInit()
 serviceCategoriesToggle()

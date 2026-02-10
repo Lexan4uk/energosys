@@ -4,8 +4,8 @@ function projectPresentationSwiper() {
 	const el = document.querySelector('.project__presentation-swiper')
 	if (!el) return
 
-	const prevBtn = document.querySelector('.projects__mob-slider-prev')
-	const nextBtn = document.querySelector('.projects__mob-slider-next')
+	const prevBtn = document.querySelector('.project__mob-slider-prev')
+	const nextBtn = document.querySelector('.project__mob-slider-next')
 
 	const GAP_REM_DESKTOP = 4
 	const GAP_REM_MOBILE = 1.2

@@ -58,6 +58,7 @@ $fc-sizes: (
 	'14': 14rem,
 	'15': 15rem,
 	'16': 16rem,
+	'16.6': 16.6rem,
 	'17': 17rem,
 	'18': 18rem,
 	'19': 19rem,
@@ -256,7 +257,15 @@ $fc-tracking: (
 .flex-unset {
 	flex: unset;
 }
-
+.visible {
+	visibility: visible;
+}
+.invisible {
+	visibility: hidden;
+}
+.collapsed {
+	visibility: collapse;
+}
 .items-start {
 	align-items: flex-start;
 }
@@ -578,6 +587,15 @@ $fc-tracking: (
 }
 @include bp-class('hidden') {
 	display: none;
+}
+@include bp-class('visible') {
+	visibility: visible;
+}
+@include bp-class('invisible') {
+	visibility: hidden;
+}
+@include bp-class('collapsed') {
+	visibility: collapse;
 }
 
 @include bp-class('flex-row') {

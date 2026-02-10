@@ -52,7 +52,8 @@ const path = {
 	src: {
 		html: sourceFolder + '/pages/**/*.html',
 		css: sourceFolder + '/styles/styles.{scss,css}',
-		js: sourceFolder + '/scripts/script.js',
+		js: [sourceFolder + '/scripts/*.js', sourceFolder + '/scripts/page-entry/*.js', '!' + sourceFolder + '/scripts/_*.js'],
+
 		img: sourceFolder + '/images/**/*.{jpg,jpeg,png,gif,ico,webp,svg}',
 		fonts: sourceFolder + '/fonts/**/*.{ttf,eot,otf,ttc,woff,woff2}',
 		svgSprite: sourceFolder + '/images/svg/svgs.svg'

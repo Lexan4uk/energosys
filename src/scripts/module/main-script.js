@@ -1,30 +1,33 @@
-const mainSwiper = new Swiper('.main__swiper', {
-	slidesPerView: 'auto',
-	centeredSlides: true,
-	loop: true,
-	speed: 600,
-	watchSlidesProgress: true,
+function mainSwiperInit() {
+	if (typeof Swiper === 'undefined') return
+	const mainSwiper = new Swiper('.main__swiper', {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		loop: true,
+		speed: 600,
+		watchSlidesProgress: true,
 
-	pagination: {
-		el: '.main__swiper .swiper-pagination',
-		clickable: false,
-		type: 'custom',
-		renderCustom: (swiper, current, total) => {
-			const pad = n => String(n).padStart(2, '0')
-			return `
+		pagination: {
+			el: '.main__swiper .swiper-pagination',
+			clickable: false,
+			type: 'custom',
+			renderCustom: (swiper, current, total) => {
+				const pad = n => String(n).padStart(2, '0')
+				return `
 				<div class="main__pg">
 					<span class="main__pg-cur font-ibm textcol-grey-200 bp:text-1.6">${pad(current)}</span>
 					<span class="main__pg-tot font-ibm textcol-grey-200 bp:text-1.6">${pad(total)}</span>
 				</div>
 			`
-		}
-	},
+			}
+		},
 
-	navigation: {
-		nextEl: '.main__swiper .swiper-button-next',
-		prevEl: '.main__swiper .swiper-button-prev'
-	}
-})
+		navigation: {
+			nextEl: '.main__swiper .swiper-button-next',
+			prevEl: '.main__swiper .swiper-button-prev'
+		}
+	})
+}
 function mainToggleCategories() {
 	const btn = document.querySelector('[data-categories-toggle]')
 	const cards = Array.from(document.querySelectorAll('[data-category-extra]'))
@@ -113,4 +116,5 @@ function mainToggleCategories() {
 		{ passive: true }
 	)
 }
+mainSwiperInit()
 mainToggleCategories()

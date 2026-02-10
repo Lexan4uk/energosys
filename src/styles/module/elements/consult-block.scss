@@ -6,6 +6,7 @@
 		bottom: 0;
 		left: 0;
 		margin-bottom: -15rem;
+		margin-left: -4rem;
 		transform: scaleX(-1);
 		opacity: 100%;
 	}
@@ -15,6 +16,8 @@
 		&__logo-bg {
 			height: 22rem;
 			margin-top: -3rem;
+			margin-left: unset;
+			margin-right: -2rem;
 			margin-bottom: 0;
 			left: unset;
 			right: 0;

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		@@include('html/base/meta.html',{ "title": "О компании" }) @@include('html/base/styles.html')
+	</head>
+
+	<body>
+		@@include('html/header.html')
+
+		<main class="about flex flex-col pt-8 bp:pt-4 global-padding-x">
+			<section class="grid bp:gap-2 about__grid">
+				<div class="">
+					<div class="flex justify-start w-full items-center bp:items-start bp:flex-col bp:gap-1 mb-auto">
+						<span class="text-6.4 fw-600 tracking-1 lh-1 bp:text-3.2"> О компании </span>
+					</div>
+				</div>
+
+				<span class="about__grid-text text-1.8 bp:text-1.6 tracking-2% max-w-60 mt-8 bp:mt-0"> Наша компания специализируется на поставках высокотехнологичного промышленного оборудования, которое помогает предприятиям разных отраслей работать эффективнее и надёжнее. В ассортимент входят энергогенерирующие и газоразделительные установки, грузоподъёмные и водоочистные системы, электротехнические и специализированные решения.Мы стремимся к тому, чтобы каждый проект был выполнен с учётом специфики производства и долгосрочных целей клиента. </span>
+				<div class="about__grid-img flex flex-col gap-2 items-end">
+					<div class="h-28 w-84 bp:h-15 bp:w-full relative overflow-hidden">
+						<img class="absolute centered w-auto h-full" src="/images/company/about-head1.png" alt="о компании" />
+					</div>
+					<div class="h-46 w-84 bp:h-20 bp:w-full relative overflow-hidden">
+						<img class="absolute centered w-auto h-full" src="/images/company/about-head2.png" alt="о компании" />
+					</div>
+				</div>
+			</section>
+			<section class="mt-20 bp:mt-11 flex bp:flex-col gap-4 bp:gap-2">
+				<div class="flex flex-col max-w-45">
+					<span class="font-ibm text-2.4 bp:text-1.8 fw-600 textcol-blue"> история </span>
+					<span class="text-1.8 bp:text-1.6 tracking-2% mt-4">
+						Компания была основана с целью обеспечить предприятия современными инженерными решениями в области энергетики и промышленного снабжения.
+						<br class="bp:hidden" />
+						<br class="bp:hidden" />
+						Начав с поставок газоразделительных установок и компрессорного оборудования, мы постепенно расширили линейку продукции, включив системы водоочистки, грузоподъёмные механизмы и электротехническое оборудование.
+					</span>
+				</div>
+				<div class="h-54 flex-1 bp:h-30 bp:w-full bp:flex-unset relative overflow-hidden">
+					<img class="absolute centered w-full h-full" src="/images/company/about-head3.png" alt="история" />
+				</div>
+				<div class="flex flex-col max-w-40">
+					<span class="text-1.8 bp:text-1.6 tracking-2% mt-auto"> Сегодня наша компания — это надёжный партнёр для промышленных предприятий, который предлагает не только оборудование, но и полный цикл сопровождения: от консультации и подбора техники до запуска и сервисного обслуживания. </span>
+				</div>
+			</section>
+			<section class="mt-16 bp:mt-11">
+				<div class="flex flex-col items-center text-center">
+					<span class="font-ibm textcol-blue fw-600 bp:fw-500 text-2.4 bp:text-1.8"> миссия </span>
+					<span class="lh-1 fw-700 text-3.4 bp:text-2.2 mt-3 max-w-90">
+						Обеспечивать предприятия современным, <span class="textcol-blue">надежным</span> и <span class="textcol-blue">энергоэффективным</span> оборудованием, способствующим <span class="textcol-blue">развитию производства</span> <br />
+						и повышению его конкурентоспособности
+					</span>
+				</div>
+			</section>
+			<section class="mt-15 bp:mt-11 relative">
+				<div class="mt-3 mb-12 bp:mb-2 flex items-end">
+					<span class="font-ibm text-2.4 bp:text-1.8 fw-600 textcol-blue bp:mx-auto">ценности</span>
+				</div>
+				<div class="flex flex-col gap-6 bp:gap-4 pl-28 bp:pl-0">
+					<div class="flex gap-4 w-full bp:flex-col">
+						<div class="flex flex-col pl-1.4 border-t-0.1 bordercol-grey-50 border-solid w-full pt-1 bp:w-auto">
+							<span class="font-ibm bp:text-1.6 textcol-blue with-blue-box mb-10 bp:mb-2.6">01</span>
+							<span class="text-3.4 bp:text-2.2 fw-700 max-w-54 lh-1"> Надежность </span>
+							<span class="bp:text-1.6 max-w-41 tracking-2% mt-1.6 bp:mt-1.2"> Мы предлагаем решения, рассчитанные на долгую и бесперебойную эксплуатацию</span>
+						</div>
+						<div class="flex flex-col pl-1.4 border-t-0.1 bordercol-grey-50 border-solid w-full pt-1 bp:w-auto">
+							<span class="font-ibm bp:text-1.6 textcol-blue with-blue-box mb-10 bp:mb-2.6">02</span>
+							<span class="text-3.4 bp:text-2.2 fw-700 max-w-54 lh-1"> Технологичность </span>
+							<span class="bp:text-1.6 max-w-38 tracking-2% mt-1.6 bp:mt-1.2">
+								Используем современные разработки <br />
+								и проверенные инженерные решения
+							</span>
+						</div>
+						<div class="flex flex-col pl-1.4 border-t-0.1 bordercol-grey-50 border-solid w-full pt-1 bp:w-auto">
+							<span class="font-ibm bp:text-1.6 textcol-blue with-blue-box mb-10 bp:mb-2.6">03</span>
+							<span class="text-3.4 bp:text-2.2 fw-700 max-w-54 lh-1"> Ориентация на клиента </span>
+							<span class="bp:text-1.6 max-w-38 tracking-2% mt-1.6 bp:mt-1.2"> Индивидуальный подход к каждому проекту, гибкость и внимание к деталям</span>
+						</div>
+					</div>
+
+					<div class="flex gap-3.8 bp:gap-2.4 w-full bp:flex-col">
+						<div class="flex flex-col pl-1.4 border-t-0.1 bordercol-grey-50 border-solid w-full pt-1 bp:w-auto">
+							<span class="font-ibm bp:text-1.6 textcol-blue with-blue-box mb-10 bp:mb-2.6">04</span>
+							<span class="text-3.4 bp:text-2.2 fw-700 max-w-54 lh-1"> Ответственность </span>
+							<span class="bp:text-1.6 max-w-38 tracking-2% mt-1.6 bp:mt-1.2">
+								Соблюдение сроков поставки, гарантийные обязательства <br />
+								и прозрачность в работе
+							</span>
+						</div>
+						<div class="flex flex-col pl-1.4 border-t-0.1 bordercol-grey-50 border-solid w-full pt-1 bp:w-auto">
+							<span class="font-ibm bp:text-1.6 textcol-blue with-blue-box mb-10 bp:mb-2.6">05</span>
+							<span class="text-3.4 bp:text-2.2 fw-700 max-w-54 lh-1"> Развитие </span>
+							<span class="bp:text-1.6 max-w-38 tracking-2% mt-1.6 bp:mt-1.2"> Мы постоянно совершенствуем ассортимент и сервис, чтобы соответствовать современным требованиям производства</span>
+						</div>
+						<div class="flex flex-col w-full pl-1.4 pt-1 border-t-0.1 bordercol-grey-50 border-solid invisible bp:hidden"></div>
+					</div>
+				</div>
+				<img class="about__logo-bg absolute h-64 w-auto bp:h-26" src="/images/logo-bg.png" alt="лого-бг" />
+			</section>
+
+			<section class="mt-15 bp:mt-11">
+				<div class="flex flex-col">
+					<div class="flex w-full justify-between items-center bp:items-start bp:flex-col">
+						<span class="font-ibm textcol-blue fw-600 bp:fw-500 text-2.4 bp:text-1.8 ml-76 bp:ml-0 bp:mx-auto"> сертификаты и лицензии </span>
+						<div class="flex flex-col gap-1.8 bp:ml-auto bp:mt-4">
+							<button class="about__mob-slider-prev">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-left"></use>
+								</svg>
+							</button>
+							<button class="about__mob-slider-next">
+								<svg class="icon w-2 h-2 textcol-grey-200">
+									<use href="/images/svg/svgs.svg#icon-arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="about__presentation-swiper h-47 bp:h-27 gap-4 bp:gap-1.2 mt-6 bp:mt-1.2 overflow-hidden">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license1.png" alt="лицезия" />
+							</div>
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license2.png" alt="лицезия" />
+							</div>
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license3.png" alt="лицезия" />
+							</div>
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license4.png" alt="лицезия" />
+							</div>
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license5.png" alt="лицезия" />
+							</div>
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license1.png" alt="лицезия" />
+							</div>
+							<div class="swiper-slide relative overflow-hidden">
+								<img class="absolute centered w-full h-full" src="/images/company/about-license1.png" alt="лицезия" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="flex bp:flex-col bp:gap-2 pb-4 bp:pb-6 mb-18 bp:pb-0 bp:mb-6 mt-14 bp:mt-11 relative">
+				<div class="flex flex-col block-with-bracket flex-1 ml-7 bp:ml-0">
+					<span class="font-ibm fw-500 textcol-grey-100 with-grey-box mb-3 bp:mb-1.4 bp:text-1.6 bp:ml-1.6">обратная связь</span>
+					<div class="text-5.4 fw-500 max-w-66 lh-1 bp:text-3">
+						Получите консультацию
+						<span class="textcol-blue">по выбору продукции </span>
+						для ваших задач
+					</div>
+				</div>
+				<div class="flex flex-col flex-1 mt-6 bp:mt-0">
+					<form class="consult-form flex flex-col gap-2.4 bp:gap-2" action="">
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="text" name="name" placeholder="ВАШЕ ИМЯ" autocomplete="name" />
+						</label>
+
+						<label class="consult-form__field">
+							<input class="consult-form__control" type="tel" name="phone" placeholder="ВАШ ТЕЛЕФОН" autocomplete="tel" />
+						</label>
+
+						<label class="consult-form__field">
+							<textarea class="consult-form__control consult-form__textarea h-16" name="task" placeholder="ОПИШИТЕ ЗАДАЧУ"></textarea>
+						</label>
+
+						<button type="submit" class="button--text mt-1.8 bp:mt-2 bp:mx-0">
+							<span>получить консультацию</span>
+							<svg class="icon w-2 h-2">
+								<use href="/images/svg/svgs.svg#icon-arrow-top"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<img class="consult__logo-bg" src="/images/logo-bg2.png" alt="лого-бг" />
+			</section>
+		</main>
+
+		@@include('html/footer.html') @@include('html/base/scripts.html', { "pageScript": "about.js", "useSwiper": true })
+	</body>
+</html>
