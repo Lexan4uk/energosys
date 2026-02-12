@@ -113,10 +113,21 @@ textarea {
 		}
 	}
 }
+.swiper-slide {
+	&:hover {
+		cursor: pointer;
+	}
+}
 .centered {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
+.img-centered-admin {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
 }
 .with {
 	&-blue-box,
@@ -208,7 +219,9 @@ textarea {
 		}
 	}
 }
-
+.box-sizing-border {
+	box-sizing: border-box;
+}
 .nav-item {
 	transition: color 0.5s ease;
 	&:hover {

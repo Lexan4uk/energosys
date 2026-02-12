@@ -824,6 +824,21 @@ $fc-tracking: (
 	@include bp-class('max-w-#{$suffix}') {
 		max-width: $value;
 	}
+	@include bp-class('border-#{$suffix}') {
+		border-width: $value;
+	}
+	@include bp-class('border-t-#{$suffix}') {
+		border-top-width: $value;
+	}
+	@include bp-class('border-r-#{$suffix}') {
+		border-right-width: $value;
+	}
+	@include bp-class('border-b-#{$suffix}') {
+		border-bottom-width: $value;
+	}
+	@include bp-class('border-l-#{$suffix}') {
+		border-left-width: $value;
+	}
 
 	@include bp-class('top-#{$suffix}') {
 		top: $value;
